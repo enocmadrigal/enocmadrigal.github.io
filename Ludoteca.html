@@ -25,14 +25,14 @@
         .game-card {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             text-align: center;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 10px;
             background-color: #fff;
-            height: 250px; /* Altura uniforme para todos los cuadros */
+            height: 300px; /* Altura uniforme para los cuadros */
             transition: transform 0.2s;
         }
         .game-card:hover {
@@ -40,8 +40,10 @@
         }
         .game-card img {
             max-width: 100%;
-            max-height: 150px; /* Limita el tamaño de las imágenes */
-            object-fit: contain; /* Ajusta la imagen sin deformarla */
+            height: auto; /* Mantiene el tamaño original */
+            max-height: 200px; /* Asegura que no exceda este límite */
+            object-fit: contain; /* Centra la imagen dentro del cuadro */
+            margin-bottom: auto; /* Empuja la imagen hacia la parte superior */
         }
         .game-card a {
             text-decoration: none; /* Quitar subrayado del enlace */
