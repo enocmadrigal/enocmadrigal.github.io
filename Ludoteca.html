@@ -9,14 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('Fondo.jpg'); /* Fondo general de la página */
-            background-size: cover; /* Asegura que cubra toda la pantalla */
+            background-image: url('Fondo.jpg');
+            background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Fija el fondo */
+            background-attachment: fixed;
         }
         header {
-            background-image: url('FondoTitulo.jpg'); /* Fondo específico para el título */
+            background-image: url('FondoTitulo.jpg');
             background-size: cover;
+            width: 100%; /* Asegura que el fondo del título cubra toda la pantalla */
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #ddd;
@@ -37,8 +38,9 @@
             border-radius: 5px;
             padding: 10px;
             background-color: #fff;
-            height: 300px; /* Altura uniforme para los cuadros */
+            min-height: 300px; /* Cambié 'height' por 'min-height' */
             transition: transform 0.2s;
+            flex-grow: 1; /* Permite que la tarjeta crezca de manera proporcional */
         }
         .game-card:hover {
             transform: scale(1.05);
@@ -71,6 +73,40 @@
         }
         .pagination a:hover {
             text-decoration: underline;
+        }
+
+        /* Estilo responsive para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+                gap: 15px;
+            }
+
+            .game-card {
+                min-height: 250px; /* Ajustar la altura mínima de las tarjetas en pantallas pequeñas */
+            }
+
+            .game-card img {
+                max-height: 230px; /* Reducir el tamaño máximo de las imágenes en pantallas pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            .game-card {
+                min-height: 220px; /* Ajustar aún más la altura mínima de las tarjetas en pantallas muy pequeñas */
+            }
+
+            .game-card img {
+                max-height: 200px; /* Reducir aún más el tamaño de las imágenes en pantallas muy pequeñas */
+            }
         }
     </style>
 </head>
