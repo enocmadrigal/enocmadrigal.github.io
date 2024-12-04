@@ -23,11 +23,16 @@
             padding: 20px;
         }
         .game-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             text-align: center;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 10px;
             background-color: #fff;
+            height: 250px; /* Altura uniforme para todos los cuadros */
             transition: transform 0.2s;
         }
         .game-card:hover {
@@ -35,8 +40,8 @@
         }
         .game-card img {
             max-width: 100%;
-            height: auto;
-            border-radius: 5px;
+            max-height: 150px; /* Limita el tamaño de las imágenes */
+            object-fit: contain; /* Ajusta la imagen sin deformarla */
         }
         .game-card a {
             text-decoration: none; /* Quitar subrayado del enlace */
