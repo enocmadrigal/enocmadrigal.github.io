@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludoteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .game-card {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+            transition: transform 0.2s;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .game-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .pagination {
+            text-align: center;
+            margin: 20px;
+        }
+        .pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .pagination a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Ludoteca</h1>
+    </header>
+    <div class="grid">
+        <!-- Repite estos bloques para más juegos -->
+        <div class="game-card">
+            <a href="Juego1.html">
+                <img src="https://via.placeholder.com/150" alt="Juego 1">
+                <p>Juego 1</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="Juego2.html">
+                <img src="https://via.placeholder.com/150" alt="Juego 2">
+                <p>Juego 2</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="Juego3.html">
+                <img src="https://via.placeholder.com/150" alt="Juego 3">
+                <p>Juego 3</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="Juego4.html">
+                <img src="https://via.placeholder.com/150" alt="Juego 4">
+                <p>Juego 4</p>
+            </a>
+        </div>
+        <!-- Termina aquí la fila -->
+    </div>
+    <div class="pagination">
+        <!-- Ajusta los enlaces para las páginas que necesites -->
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Siguiente</a>
+    </div>
+</body>
+</html>
