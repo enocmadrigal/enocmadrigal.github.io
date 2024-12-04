@@ -9,10 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url('Fondo.jpg'); /* Fondo general de la página */
+            background-size: cover; /* Asegura que cubra toda la pantalla */
+            background-position: center;
+            background-attachment: fixed; /* Fija el fondo */
         }
         header {
-            background-color: #f8f9fa;
-            padding: 10px;
+            background-image: url('FondoTitulo.jpg'); /* Fondo específico para el título */
+            background-size: cover;
+            padding: 20px;
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
@@ -40,14 +45,14 @@
         }
         .game-card img {
             max-width: 100%;
-            height: auto; /* Mantiene el tamaño original */
-            max-height: 270px; /* Ajuste el tamaño máximo de las imágenes */
-            object-fit: contain; /* Centra la imagen dentro del cuadro */
-            margin-bottom: auto; /* Empuja la imagen hacia la parte superior */
+            height: auto;
+            max-height: 270px;
+            object-fit: contain;
+            margin-bottom: auto;
         }
         .game-card a {
-            text-decoration: none; /* Quitar subrayado del enlace */
-            color: inherit;       /* Heredar el color del texto */
+            text-decoration: none;
+            color: inherit;
         }
         .game-card p {
             margin: 10px 0 0;
@@ -126,7 +131,6 @@
         </div>
     </div>
     <div class="pagination">
-        <!-- Ajusta los enlaces para las páginas que necesites -->
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
