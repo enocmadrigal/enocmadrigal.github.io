@@ -79,7 +79,8 @@
             transition: transform 0.2s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-end; /* Alinea el contenido hacia el fondo */
+            align-items: center; /* Centra el contenido horizontalmente */
             width: 100%; /* Asegura que ocupe todo el ancho disponible */
             max-width: 100%; /* Impide que se exceda el ancho de la pantalla */
         }
@@ -96,7 +97,7 @@
         }
 
         .game-card p {
-            margin-top: auto;
+            margin-top: auto; /* Alinea el texto al fondo */
             font-weight: bold;
             color: #333;
         }
