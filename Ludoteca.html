@@ -17,7 +17,7 @@
         header {
             background-image: url('FondoTitulo.jpg');
             background-size: cover;
-            width: 100%; /* Asegura que el fondo del título cubra toda la pantalla */
+            width: 100%;
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #ddd;
@@ -38,9 +38,9 @@
             border-radius: 5px;
             padding: 10px;
             background-color: #fff;
-            min-height: 300px; /* Cambié 'height' por 'min-height' */
+            min-height: 300px;
             transition: transform 0.2s;
-            flex-grow: 1; /* Permite que la tarjeta crezca de manera proporcional */
+            flex-grow: 1;
         }
         .game-card:hover {
             transform: scale(1.05);
@@ -75,25 +75,23 @@
             text-decoration: underline;
         }
 
-        /* Estilo responsive para pantallas pequeñas */
         @media (max-width: 768px) {
             .grid {
-                grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
-                gap: 15px;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .game-card {
-                min-height: 250px; /* Ajustar la altura mínima de las tarjetas en pantallas pequeñas */
+                min-height: 250px;
             }
 
             .game-card img {
-                max-height: 230px; /* Reducir el tamaño máximo de las imágenes en pantallas pequeñas */
+                max-height: 230px;
             }
         }
 
         @media (max-width: 480px) {
             .grid {
-                grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+                grid-template-columns: 1fr;
             }
 
             header {
@@ -101,11 +99,11 @@
             }
 
             .game-card {
-                min-height: 220px; /* Ajustar aún más la altura mínima de las tarjetas en pantallas muy pequeñas */
+                min-height: 220px;
             }
 
             .game-card img {
-                max-height: 200px; /* Reducir aún más el tamaño de las imágenes en pantallas muy pequeñas */
+                max-height: 200px;
             }
         }
     </style>
@@ -115,62 +113,57 @@
         <h1>Ludoteca</h1>
     </header>
     <div class="grid">
-        <!-- Fila 1 -->
         <div class="game-card">
-            <a href="100mexicanosDijeron1.jpg">
-                <img src="100mexicanosDijeron1.jpg" alt="Juego 1">
-                <p>100 mexicanos dijeron</p>
+            <a href="WeAreNotReallyStrangers.html">
+                <img src="weAreNotReallyStrangers1.jpg" alt="We´re not really strangers">
+                <p>We´re not really strangers</p>
             </a>
         </div>
         <div class="game-card">
-            <a href="Juego2.html">
-                <img src="aSusMarcas1.jpg" alt="Juego 2">
-                <p>A sus marcas!</p>
+            <a href="TemasDeSobremesa.html">
+                <img src="temasDeSobremesa1.jpg" alt="Temas de sobremesa">
+                <p>Temas de sobremesa</p>
             </a>
         </div>
         <div class="game-card">
-            <a href="Juego3.html">
-                <img src="backgammon.jpg" alt="Juego 3">
-                <p>Backgammon</p>
+            <a href="LIAR.html">
+                <img src="liar1.jpg" alt="LIAR - Descubre al mentiroso">
+                <p>LIAR - Descubre al mentiroso</p>
             </a>
         </div>
         <div class="game-card">
-            <a href="Juego4.html">
-                <img src="bastaOriginal.jpg" alt="Juego 4">
-                <p>Basta Original</p>
-            </a>
-        </div>
-        <!-- Fila 2 -->
-        <div class="game-card">
-            <a href="Juego5.html">
-                <img src="catán.jpg" alt="Juego 5">
-                <p>Catán</p>
+            <a href="MejorPeorAmigo.html">
+                <img src="mejorPeorAmigo1.jpg" alt="Mejor/peor amig@">
+                <p>Mejor/peor amig@</p>
             </a>
         </div>
         <div class="game-card">
-            <a href="Juego6.html">
-                <img src="dixit.jpg" alt="Juego 6">
-                <p>Dixit</p>
+            <a href="AlChile.html">
+                <img src="alChile1.jpg" alt="AL CHILE">
+                <p>AL CHILE</p>
             </a>
         </div>
         <div class="game-card">
-            <a href="Juego7.html">
-                <img src="uno.jpg" alt="Juego 7">
-                <p>UNO</p>
+            <a href="CatanPlus.html">
+                <img src="catanPlus1.jpg" alt="Catan plus">
+                <p>Catan plus</p>
             </a>
         </div>
         <div class="game-card">
-            <a href="Juego8.html">
-                <img src="monopoly.jpg" alt="Juego 8">
-                <p>Monopoly</p>
+            <a href="CatanNavegantes.html">
+                <img src="catanNavegantes1.jpg" alt="Catan - Expansión navegantes">
+                <p>Catan - Expansión navegantes</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="TuristaDeLaSuerte.html">
+                <img src="turistaDeLaSuerte1.jpg" alt="Turista de la suerte">
+                <p>Turista de la suerte</p>
             </a>
         </div>
     </div>
     <div class="pagination">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">Siguiente</a>
+        <a href="Ludoteca2.html">Siguiente</a>
     </div>
 </body>
 </html>
