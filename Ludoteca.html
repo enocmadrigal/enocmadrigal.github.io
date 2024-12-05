@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludoteca</title>
+    <title>Ludoteca - Página 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-image: url('Fondo.jpg');
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
         }
         header {
             background-image: url('FondoTitulo.jpg');
             background-size: cover;
-            width: 100%;
-            padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            padding: 50px 0;
+        }
+        header h1 {
+            color: white;
+            font-size: 3em;
         }
         .grid {
             display: grid;
@@ -29,82 +29,38 @@
             padding: 20px;
         }
         .game-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 5px;
             padding: 10px;
-            background-color: #fff;
-            min-height: 300px;
             transition: transform 0.2s;
-            flex-grow: 1;
-        }
-        .game-card:hover {
-            transform: scale(1.05);
         }
         .game-card img {
-            max-width: 100%;
-            height: auto;
-            max-height: 270px;
-            object-fit: contain;
-            margin-bottom: auto;
-        }
-        .game-card a {
-            text-decoration: none;
-            color: inherit;
+            width: 100%;
+            border-radius: 10px;
         }
         .game-card p {
             margin: 10px 0 0;
             font-weight: bold;
-            color: #000;
+            color: #333;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
         }
         .pagination {
             text-align: center;
-            margin: 20px;
+            margin-top: 20px;
         }
         .pagination a {
-            margin: 0 5px;
+            margin: 0 10px;
             text-decoration: none;
-            color: #007bff;
+            color: #333;
             font-weight: bold;
         }
-        .pagination a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .game-card {
-                min-height: 250px;
-            }
-
-            .game-card img {
-                max-height: 230px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            header {
-                padding: 15px;
-            }
-
-            .game-card {
-                min-height: 220px;
-            }
-
-            .game-card img {
-                max-height: 200px;
-            }
+        .pagination select {
+            padding: 5px;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -126,7 +82,7 @@
             </a>
         </div>
         <div class="game-card">
-            <a href="LIAR.html">
+            <a href="Liar.html">
                 <img src="liar1.jpg" alt="LIAR - Descubre al mentiroso">
                 <p>LIAR - Descubre al mentiroso</p>
             </a>
@@ -163,7 +119,17 @@
         </div>
     </div>
     <div class="pagination">
+        <a href="Ludoteca7.html">Anterior</a>
         <a href="Ludoteca2.html">Siguiente</a>
+        <select onchange="location = this.value;">
+            <option value="Ludoteca1.html" selected>Página 1</option>
+            <option value="Ludoteca2.html">Página 2</option>
+            <option value="Ludoteca3.html">Página 3</option>
+            <option value="Ludoteca4.html">Página 4</option>
+            <option value="Ludoteca5.html">Página 5</option>
+            <option value="Ludoteca6.html">Página 6</option>
+            <option value="Ludoteca7.html">Página 7</option>
+        </select>
     </div>
 </body>
 </html>
