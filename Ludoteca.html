@@ -21,7 +21,8 @@
             text-align: center;
             padding: 50px 0;
             width: 100%;
-            box-sizing: border-box;
+            margin: 0; /* Elimina márgenes */
+            box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
         }
         header h1 {
             color: black;
@@ -79,9 +80,10 @@
         /* Paginación */
         .pagination {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px 0; /* Añade un margen superior e inferior */
+            position: relative; /* Asegura que no quede pegada al borde inferior */
         }
-        .pagination a {
+        .pagination a, .pagination span {
             margin: 0 10px;
             text-decoration: none;
             color: #333;
