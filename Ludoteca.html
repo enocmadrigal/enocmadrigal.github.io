@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludoteca - Página 1</title>
     <style>
-        /* Estilo Global */
         body {
             font-family: Arial, sans-serif;
             background-image: url('Fondo.jpg');
@@ -13,7 +12,8 @@
             margin: 0;
             padding: 0;
         }
-        /* Encabezado */
+
+        /* Barra del Título */
         header {
             background-image: url('FondoTitulo.jpg');
             background-size: cover;
@@ -21,31 +21,35 @@
             text-align: center;
             padding: 50px 0;
             width: 100%;
-            margin: 0; /* Elimina márgenes */
-            box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+            margin: 0;
+            box-sizing: border-box;
         }
+
         header h1 {
             color: black;
             font-size: 3em;
             margin: 0;
         }
-        /* Grid */
+
+        /* Grid de Juegos */
         .grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
             gap: 20px;
             padding: 20px;
         }
-        /* Ajustes en pantallas pequeñas */
+
+        /* Responsividad para dispositivos móviles */
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
             }
             header {
-                padding: 30px 0; /* Reduce el padding para móviles */
+                padding: 30px 0; /* Ajusta el padding en pantallas pequeñas */
             }
         }
-        /* Tarjetas de juegos */
+
+        /* Estilo para las tarjetas de juegos */
         .game-card {
             background-color: white;
             border-radius: 10px;
@@ -57,41 +61,51 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
         .game-card img {
             width: auto;
             height: 150px;
             margin: auto;
-            display: block;
             border-radius: 10px;
         }
+
         .game-card a {
-            text-decoration: none; /* Sin subrayado */
-            color: inherit;
+            text-decoration: none;
         }
+
         .game-card p {
             margin-top: auto;
             font-weight: bold;
             color: #333;
-            text-decoration: none;
         }
+
         .game-card:hover {
             transform: scale(1.05);
         }
+
         /* Paginación */
         .pagination {
             text-align: center;
-            margin: 20px 0; /* Añade un margen superior e inferior */
-            position: relative; /* Asegura que no quede pegada al borde inferior */
+            margin: 20px 0 40px; /* Ajusta el margen inferior para darle espacio */
         }
+
         .pagination a, .pagination span {
             margin: 0 10px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
         }
+
         .pagination span {
             font-weight: bold;
             color: black;
+        }
+
+        /* Asegurar que la paginación no quede pegada al borde */
+        @media (max-width: 768px) {
+            .pagination {
+                margin-bottom: 20px; /* Espacio extra abajo */
+            }
         }
     </style>
 </head>
