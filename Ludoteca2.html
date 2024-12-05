@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludoteca - Página 2</title>
     <style>
-        /* Mantener el mismo estilo de la página 1 */
         body {
             font-family: Arial, sans-serif;
             background-image: url('Fondo.jpg');
@@ -20,7 +19,7 @@
             padding: 50px 0;
         }
         header h1 {
-            color: white;
+            color: black;
             font-size: 3em;
         }
         .grid {
@@ -45,6 +44,7 @@
             margin: 10px 0 0;
             font-weight: bold;
             color: #333;
+            text-decoration: none;
         }
         .game-card:hover {
             transform: scale(1.05);
@@ -59,9 +59,9 @@
             color: #333;
             font-weight: bold;
         }
-        .pagination select {
-            padding: 5px;
-            margin-left: 10px;
+        .pagination span {
+            font-weight: bold;
+            color: black;
         }
     </style>
 </head>
@@ -120,17 +120,16 @@
         </div>
     </div>
     <div class="pagination">
-        <a href="Ludoteca1.html">Anterior</a>
+        <a href="Ludoteca.html">Anterior</a>
+        <a href="Ludoteca1.html">1</a>
+        <span>2</span>
+        <a href="Ludoteca3.html">3</a>
+        <a href="Ludoteca4.html">4</a>
+        <a href="Ludoteca5.html">5</a>
+        <a href="Ludoteca6.html">6</a>
+        <a href="Ludoteca7.html">7</a>
+        <a href="Ludoteca8.html">8</a>
         <a href="Ludoteca3.html">Siguiente</a>
-        <select onchange="location = this.value;">
-            <option value="Ludoteca1.html">Página 1</option>
-            <option value="Ludoteca2.html" selected>Página 2</option>
-            <option value="Ludoteca3.html">Página 3</option>
-            <option value="Ludoteca4.html">Página 4</option>
-            <option value="Ludoteca5.html">Página 5</option>
-            <option value="Ludoteca6.html">Página 6</option>
-            <option value="Ludoteca7.html">Página 7</option>
-        </select>
     </div>
 </body>
 </html>
