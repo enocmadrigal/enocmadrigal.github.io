@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludoteca - Página 2</title>
+    <title>Ludoteca - Página 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,23 +11,65 @@
             background-size: cover;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        /* Barra del Título */
         header {
             background-image: url('FondoTitulo.jpg');
             background-size: cover;
+            background-position: center;
             text-align: center;
             padding: 50px 0;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
         }
+
         header h1 {
             color: black;
             font-size: 3em;
+            margin: 0;
         }
+
+        /* Grid de Juegos */
         .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
             gap: 20px;
             padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
+
+        /* Responsividad para dispositivos móviles */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+                padding: 10px;
+            }
+
+            header {
+                padding: 40px 0; /* Ajusta el padding en pantallas pequeñas */
+                background-size: 100% 100%; /* Asegura que cubra todo el ancho sin espacios */
+            }
+
+            header h1 {
+                font-size: 2em; /* Reduce el tamaño del título para mejor ajuste */
+            }
+
+            /* Estilo de la paginación en celular */
+            .pagination a, .pagination span {
+                color: white !important; /* Cambia el color a blanco */
+                font-size: 1.5em; /* Aumenta el tamaño de los números */
+            }
+
+            .pagination {
+                margin: 20px 0 40px; /* Ajusta el margen inferior para darle espacio */
+            }
+        }
+
+        /* Estilo para las tarjetas de juegos */
         .game-card {
             background-color: white;
             border-radius: 10px;
@@ -38,38 +80,54 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 100%; /* Asegura que ocupe todo el ancho disponible */
+            max-width: 100%; /* Impide que se exceda el ancho de la pantalla */
         }
+
         .game-card img {
-            width: auto;
-            height: 150px;
-            margin: auto;
+            width: 100%; /* Ajusta la imagen al 100% del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
             border-radius: 10px;
+            max-width: 100%; /* Impide que la imagen exceda el tamaño de su contenedor */
         }
+
         .game-card a {
             text-decoration: none;
         }
+
         .game-card p {
             margin-top: auto;
             font-weight: bold;
             color: #333;
-            text-decoration: none;
         }
+
         .game-card:hover {
             transform: scale(1.05);
         }
+
+        /* Paginación */
         .pagination {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px 0 40px; /* Ajusta el margen inferior para darle espacio */
         }
-        .pagination a {
+
+        .pagination a, .pagination span {
             margin: 0 10px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
         }
+
         .pagination span {
             font-weight: bold;
             color: black;
+        }
+
+        /* Asegurar que la paginación no quede pegada al borde */
+        @media (max-width: 768px) {
+            .pagination {
+                margin-bottom: 20px; /* Espacio extra abajo */
+            }
         }
     </style>
 </head>
