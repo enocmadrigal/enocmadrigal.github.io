@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludoteca - Página 1</title>
     <style>
+        /* Estilo Global */
         body {
             font-family: Arial, sans-serif;
             background-image: url('Fondo.jpg');
@@ -12,30 +13,38 @@
             margin: 0;
             padding: 0;
         }
+        /* Encabezado */
         header {
-    background-image: url('FondoTitulo.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 50px 0;
-    width: 100%; /* Asegura que el ancho sea completo */
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-}
+            background-image: url('FondoTitulo.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 50px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
         header h1 {
             color: black;
             font-size: 3em;
+            margin: 0;
         }
+        /* Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
             gap: 20px;
             padding: 20px;
         }
-@media (max-width: 768px) { /* Cambios para pantallas pequeñas */
-    .grid {
-        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
-    }
-}
+        /* Ajustes en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+            }
+            header {
+                padding: 30px 0; /* Reduce el padding para móviles */
+            }
+        }
+        /* Tarjetas de juegos */
         .game-card {
             background-color: white;
             border-radius: 10px;
@@ -51,10 +60,12 @@
             width: auto;
             height: 150px;
             margin: auto;
+            display: block;
             border-radius: 10px;
         }
         .game-card a {
-            text-decoration: none;
+            text-decoration: none; /* Sin subrayado */
+            color: inherit;
         }
         .game-card p {
             margin-top: auto;
@@ -65,6 +76,7 @@
         .game-card:hover {
             transform: scale(1.05);
         }
+        /* Paginación */
         .pagination {
             text-align: center;
             margin-top: 20px;
@@ -86,7 +98,6 @@
         <h1>Ludoteca</h1>
     </header>
     <div class="grid">
-        
         <div class="game-card">
             <a href="#">
                 <img src="weAreNotReallyStrangers1.jpg" alt="We´re not really strangers">
@@ -137,7 +148,14 @@
         </div>
     </div>
     <div class="pagination">
-        <span>1</span> <a href="Ludoteca2.html">2</a> <a href="Ludoteca3.html">3</a> <a href="Ludoteca4.html">4</a> <a href="Ludoteca5.html">5</a> <a href="Ludoteca6.html">6</a> <a href="Ludoteca7.html">7</a> <a href="Ludoteca2.html">SIGUIENTE</a>
+        <span>1</span>
+        <a href="Ludoteca2.html">2</a>
+        <a href="Ludoteca3.html">3</a>
+        <a href="Ludoteca4.html">4</a>
+        <a href="Ludoteca5.html">5</a>
+        <a href="Ludoteca6.html">6</a>
+        <a href="Ludoteca7.html">7</a>
+        <a href="Ludoteca2.html">SIGUIENTE</a>
     </div>
 </body>
 </html>
