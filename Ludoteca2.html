@@ -5,7 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludoteca - Página 2</title>
     <style>
-        /* El mismo estilo que la página 1, para que no se pierdan los cambios previos */
+        /* Mantener el mismo estilo de la página 1 */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Fondo.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('FondoTitulo.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            color: white;
+            font-size: 3em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .game-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .game-card p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .pagination select {
+            padding: 5px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -39,8 +96,8 @@
         </div>
         <div class="game-card">
             <a href="LifeMario.html">
-                <img src="lifeMario1.jpg" alt="The Game of LIFE - SUPER MARIO">
-                <p>The Game of LIFE - SUPER MARIO</p>
+                <img src="lifeMario1.jpg" alt="the Game of LIFE - SUPER MARIO">
+                <p>the Game of LIFE - SUPER MARIO</p>
             </a>
         </div>
         <div class="game-card">
@@ -63,8 +120,17 @@
         </div>
     </div>
     <div class="pagination">
-        <a href="Ludoteca.html">Anterior</a>
+        <a href="Ludoteca1.html">Anterior</a>
         <a href="Ludoteca3.html">Siguiente</a>
+        <select onchange="location = this.value;">
+            <option value="Ludoteca1.html">Página 1</option>
+            <option value="Ludoteca2.html" selected>Página 2</option>
+            <option value="Ludoteca3.html">Página 3</option>
+            <option value="Ludoteca4.html">Página 4</option>
+            <option value="Ludoteca5.html">Página 5</option>
+            <option value="Ludoteca6.html">Página 6</option>
+            <option value="Ludoteca7.html">Página 7</option>
+        </select>
     </div>
 </body>
 </html>
