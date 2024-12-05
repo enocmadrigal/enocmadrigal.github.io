@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludoteca - Página 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Fondo.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('FondoTitulo.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            color: black;
+            font-size: 3em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .game-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .game-card img {
+            width: auto;
+            height: 150px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .game-card a {
+            text-decoration: none;
+        }
+        .game-card p {
+            margin-top: auto;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .pagination span {
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ludoteca</h1>
+    </header>
+    <div class="grid">
+        
+        <div class="game-card">
+            <a href="#">
+                <img src="dominoClasico.jpg" alt="Domino Clásico">
+                <p>Domino Clásico</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="damasChinas.jpg" alt="Damas chinas">
+                <p>Damas chinas</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="barajaEspañola1.jpg" alt="Baraja española">
+                <p>Baraja española</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="barajaPokerDorada1.jpg" alt="Baraja POKER - Dorada">
+                <p>Baraja POKER - Dorada</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="barajaPokerPlateada1.jpg" alt="Baraja POKER - Plateada">
+                <p>Baraja POKER - Plateada</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="casinoFabuloso1.jpg" alt="Casino Fabuloso">
+                <p>Casino Fabuloso</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="bastaOriginal.jpg" alt="Basta original">
+                <p>Basta original</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="loteriaMillenial.jpg" alt="Lotería Millenial">
+                <p>Lotería Millenial</p>
+            </a>
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="Ludoteca2.html">ANTERIOR</a> <a href="Ludoteca.html">1</a> <a href="Ludoteca2.html">2</a> <span>3</span> <a href="Ludoteca4.html">4</a> <a href="Ludoteca5.html">5</a> <a href="Ludoteca6.html">6</a> <a href="Ludoteca7.html">7</a> <a href="Ludoteca4.html">SIGUIENTE</a>
+    </div>
+</body>
+</html>

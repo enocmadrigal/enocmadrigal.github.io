@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludoteca - Página 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Fondo.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('FondoTitulo.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            color: black;
+            font-size: 3em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .game-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .game-card img {
+            width: auto;
+            height: 150px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .game-card a {
+            text-decoration: none;
+        }
+        .game-card p {
+            margin-top: auto;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .pagination span {
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ludoteca</h1>
+    </header>
+    <div class="grid">
+        
+        <div class="game-card">
+            <a href="#">
+                <img src="tetris1.jpg" alt="TETRIS">
+                <p>TETRIS</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="uno.jpg" alt="UNO">
+                <p>UNO</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="rummy.jpg" alt="RUMMY">
+                <p>RUMMY</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="phase10.jpg" alt="Phase 10">
+                <p>Phase 10</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="scrabbleStarWars1.jpg" alt="Scrabble - Edición Star Wars">
+                <p>Scrabble - Edición Star Wars</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="battleShip1.jpg" alt="Batalla Naval">
+                <p>Batalla Naval</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="stratego1.jpg" alt="Stratego">
+                <p>Stratego</p>
+            </a>
+        </div>
+        <div class="game-card">
+            <a href="#">
+                <img src="carasYGestos1.jpg" alt="Caras y gestos">
+                <p>Caras y gestos</p>
+            </a>
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="Ludoteca3.html">ANTERIOR</a> <a href="Ludoteca.html">1</a> <a href="Ludoteca2.html">2</a> <a href="Ludoteca3.html">3</a> <span>4</span> <a href="Ludoteca5.html">5</a> <a href="Ludoteca6.html">6</a> <a href="Ludoteca7.html">7</a> <a href="Ludoteca5.html">SIGUIENTE</a>
+    </div>
+</body>
+</html>
