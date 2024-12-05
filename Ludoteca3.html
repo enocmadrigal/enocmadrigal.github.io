@@ -61,11 +61,18 @@
             /* Estilo de la paginación en celular */
             .pagination a, .pagination span {
                 color: white !important; /* Cambia el color a blanco */
-                font-size: 1.5em; /* Aumenta el tamaño de los números */
+                font-size: 1.2em; /* Reduce un poco el tamaño de los números */
             }
 
             .pagination {
                 margin: 20px 0 40px; /* Ajusta el margen inferior para darle espacio */
+                display: flex;
+                justify-content: center; /* Asegura que se alinee al centro */
+                flex-wrap: nowrap; /* Evita que se rompan a dos líneas */
+            }
+
+            .pagination a {
+                margin: 0 5px; /* Reduce el espacio entre los números */
             }
         }
 
@@ -113,7 +120,7 @@
         }
 
         .pagination a, .pagination span {
-            margin: 0 10px;
+            margin: 0 5px; /* Reduce el espacio entre los números */
             text-decoration: none;
             color: #333;
             font-weight: bold;
@@ -131,7 +138,8 @@
             }
         }
     </style>
-</head><body>
+</head>
+<body>
     <header>
         <h1>Ludoteca</h1>
     </header>
