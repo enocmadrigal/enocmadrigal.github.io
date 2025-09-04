@@ -1,140 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludoteca - Página 1</title>
+    <title>Ludoteca - Página 6</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('Fondo.jpg');
-            background-size: cover;
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Barra del Título */
-        header {
-            background-image: url('FondoTitulo.jpg');
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('Fondo.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
+            color: #333;
+        }
+
+        header {
+            background: url('FondoTitulo.jpg') no-repeat center center;
+            background-size: cover;
             text-align: center;
-            padding: 50px 0;
-            width: 100%;
-            margin: 0;
-            box-sizing: border-box;
+            padding: 60px 20px;
+            color: black;
+            text-shadow: 1px 1px 4px rgba(255,255,255,0.6);
         }
 
         header h1 {
-            color: black;
             font-size: 3em;
-            margin: 0;
         }
 
-        /* Grid de Juegos */
         .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Responsividad para dispositivos móviles */
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
-                padding: 10px;
-            }
-
-            header {
-                padding: 40px 0; /* Ajusta el padding en pantallas pequeñas */
-                background-size: 100% 100%; /* Asegura que cubra todo el ancho sin espacios */
-            }
-
-            header h1 {
-                font-size: 2em; /* Reduce el tamaño del título para mejor ajuste */
-            }
-
-            /* Estilo de la paginación en celular */
-            .pagination a, .pagination span {
-                color: white !important; /* Cambia el color a blanco */
-                font-size: 1.2em; /* Reduce un poco el tamaño de los números */
-            }
-
-            .pagination {
-                margin: 20px 0 40px; /* Ajusta el margen inferior para darle espacio */
-                display: flex;
-                justify-content: center; /* Asegura que se alinee al centro */
-                flex-wrap: nowrap; /* Evita que se rompan a dos líneas */
-            }
-
-            .pagination a {
-                margin: 0 5px; /* Reduce el espacio entre los números */
-            }
-        }
-
-        /* Estilo para las tarjetas de juegos */
         .game-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 10px;
-            transition: transform 0.2s;
+            background-color: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* Alinea el contenido hacia el fondo */
-            align-items: center; /* Centra el contenido horizontalmente */
-            width: 100%; /* Asegura que ocupe todo el ancho disponible */
-            max-width: 100%; /* Impide que se exceda el ancho de la pantalla */
         }
 
         .game-card img {
-            width: 100%; /* Ajusta la imagen al 100% del contenedor */
-            height: auto; /* Mantiene la proporción de la imagen */
-            border-radius: 10px;
-            max-width: 100%; /* Impide que la imagen exceda el tamaño de su contenedor */
-        }
-
-        .game-card a {
-            text-decoration: none;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         .game-card p {
-            margin-top: auto; /* Alinea el texto al fondo */
+            text-align: center;
+            padding: 12px;
             font-weight: bold;
-            color: #333;
+            font-size: 1.1em;
+            flex-grow: 1;
         }
 
         .game-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
         }
 
-        /* Paginación */
         .pagination {
-            text-align: center;
-            margin: 20px 0 40px; /* Ajusta el margen inferior para darle espacio */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
         }
 
         .pagination a, .pagination span {
-            margin: 0 5px; /* Reduce el espacio entre los números */
+            padding: 10px 16px;
+            border-radius: 8px;
             text-decoration: none;
-            color: #333;
             font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .pagination a {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .pagination a:hover {
+            background-color: #333;
+            color: #fff;
         }
 
         .pagination span {
-            font-weight: bold;
-            color: black;
+            background-color: #333;
+            color: #fff;
         }
 
-        /* Asegurar que la paginación no quede pegada al borde */
         @media (max-width: 768px) {
-            .pagination {
-                margin-bottom: 20px; /* Espacio extra abajo */
+            header h1 {
+                font-size: 2em;
             }
         }
     </style>
@@ -143,59 +112,44 @@
     <header>
         <h1>Ludoteca</h1>
     </header>
+
     <div class="grid">
-        
         <div class="game-card">
-            <a href="#">
-                <img src="historyChannel1.jpg" alt="History Channel - TRIVIA GAME">
-                <p>History Channel - TRIVIA GAME</p>
-            </a>
+            <a href="#"><img src="historyChannel1.jpg" alt="History Channel - TRIVIA GAME"><p>History Channel - TRIVIA GAME</p></a>
         </div>
         <div class="game-card">
-            <a href="#">
-                <img src="sequence1.jpg" alt="SEQUENCE">
-                <p>SEQUENCE</p>
-            </a>
+            <a href="#"><img src="sequence1.jpg" alt="SEQUENCE"><p>SEQUENCE</p></a>
         </div>
         <div class="game-card">
-            <a href="#">
-                <img src="hitster1.jpg" alt="HITSTER">
-                <p>HITSTER</p>
-            </a>
+            <a href="#"><img src="hitster1.jpg" alt="HITSTER"><p>HITSTER</p></a>
         </div>
         <div class="game-card">
-            <a href="#">
-                <img src="amongUs1.jpg" alt="AMONG US - El juego de mesa">
-                <p>AMONG US - El juego de mesa</p>
-            </a>
+            <a href="#"><img src="amongUs1.jpg" alt="AMONG US - El juego de mesa"><p>AMONG US - El juego de mesa</p></a>
         </div>
         <div class="game-card">
-            <a href="#">
-                <img src="thatsNotAHat1.jpg" alt="That´s not a hat!">
-                <p>That´s not a hat!</p>
-            </a>
+            <a href="#"><img src="thatsNotAHat1.jpg" alt="That´s not a hat!"><p>That´s not a hat!</p></a>
         </div>
         <div class="game-card">
-            <a href="#">
-                <img src="aSusMarcas1.jpg" alt="!A sus marcas!">
-                <p>!A sus marcas!</p>
-            </a>
+            <a href="#"><img src="aSusMarcas1.jpg" alt="!A sus marcas!"><p>!A sus marcas!</p></a>
         </div>
         <div class="game-card">
-            <a href="#">
-                <img src="exit.jpg" alt="Exit - La cabaña abandonada">
-                <p>Exit - La cabaña abandonada</p>
-            </a>
+            <a href="#"><img src="exit.jpg" alt="Exit - La cabaña abandonada"><p>Exit - La cabaña abandonada</p></a>
         </div>
         <div class="game-card">
-            <a href="#">
-                <img src="yuGiOh1.jpg" alt="YU-GI-OH Card Game">
-                <p>YU-GI-OH Card Game</p>
-            </a>
+            <a href="#"><img src="yuGiOh1.jpg" alt="YU-GI-OH Card Game"><p>YU-GI-OH Card Game</p></a>
         </div>
     </div>
+
     <div class="pagination">
-        <a href="Ludoteca5.html">ANTERIOR</a> <a href="Ludoteca.html">1</a> <a href="Ludoteca2.html">2</a> <a href="Ludoteca3.html">3</a> <a href="Ludoteca4.html">4</a> <a href="Ludoteca5.html">5</a> <span>6</span> <a href="Ludoteca7.html">7</a> <a href="Ludoteca7.html">SIGUIENTE</a>
+        <a href="Ludoteca5.html">ANTERIOR</a>
+        <a href="Ludoteca.html">1</a>
+        <a href="Ludoteca2.html">2</a>
+        <a href="Ludoteca3.html">3</a>
+        <a href="Ludoteca4.html">4</a>
+        <a href="Ludoteca5.html">5</a>
+        <span>6</span>
+        <a href="Ludoteca7.html">7</a>
+        <a href="Ludoteca7.html">SIGUIENTE</a>
     </div>
 </body>
 </html>
