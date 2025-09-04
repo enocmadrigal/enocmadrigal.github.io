@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludoteca - Página 1</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('Fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: url('FondoTitulo.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            padding: 60px 20px;
+            color: black;
+            text-shadow: 1px 1px 4px rgba(255,255,255,0.6);
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        /* Grid de juegos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tarjetas de juego */
+        .game-card {
+            background-color: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .game-card p {
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 1.1em;
+            flex-grow: 1;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Paginación */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .pagination a, .pagination span {
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .pagination a {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .pagination a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .pagination span {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Responsividad header */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ludoteca</h1>
+    </header>
+
+    <div class="grid">
+        <div class="game-card">
+            <a href="#"><img src="weAreNotReallyStrangers1.jpg" alt="We´re not really strangers"><p>We´re not really strangers</p></a>
+        </div>
+        <div class="game-card">
+            <a href="#"><img src="temasDeSobremesa1.jpg" alt="Temas de sobremesa"><p>Temas de sobremesa</p></a>
+        </div>
+        <div class="game-card">
+            <a href="#"><img src="liar1.jpg" alt="LIAR - Descubre al mentiroso"><p>LIAR - Descubre al mentiroso</p></a>
+        </div>
+        <div class="game-card">
+            <a href="#"><img src="mejorPeorAmigo1.jpg" alt="Mejor/peor amig@"><p>Mejor/peor amig@</p></a>
+        </div>
+        <div class="game-card">
+            <a href="#"><img src="alChile1.jpg" alt="AL CHILE"><p>AL CHILE</p></a>
+        </div>
+        <div class="game-card">
+            <a href="#"><img src="catanPlus1.jpg" alt="Catan plus"><p>Catan plus</p></a>
+        </div>
+        <div class="game-card">
+            <a href="#"><img src="catanNavegantes1.jpg" alt="Catan - Expansión navegantes"><p>Catan - Expansión navegantes</p></a>
+        </div>
+        <div class="game-card">
+            <a href="#"><img src="turistaDeLaSuerte1.jpg" alt="Turista de la suerte"><p>Turista de la suerte</p></a>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <span>1</span>
+        <a href="Ludoteca2.html">2</a>
+        <a href="Ludoteca3.html">3</a>
+        <a href="Ludoteca4.html">4</a>
+        <a href="Ludoteca5.html">5</a>
+        <a href="Ludoteca6.html">6</a>
+        <a href="Ludoteca7.html">7</a>
+        <a href="Ludoteca2.html">SIGUIENTE</a>
+    </div>
+</body>
+</html>
