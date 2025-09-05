@@ -110,10 +110,31 @@ h1, h2 {
   align-items: center;
 }
 .filters select {
-  padding: 0.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  border: none;
   border-radius: 6px;
-  border: 1px solid #ddd;
+  padding: 0.5rem 1.2rem;
   font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px #0001;
+  transition: background 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.8em center;
+  background-size: 1.2em;
+  padding-right: 2.5em;
+}
+.filters select:hover,
+.filters select:focus {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  box-shadow: 0 4px 16px #0002;
 }
 
 /* Botón bonito para reiniciar filtros */
