@@ -6,13 +6,15 @@ export class Filters {
     render() {
         const container = document.createElement("div");
         container.className = "filters";
-        // Helper to create a select
+        const selects = [];
+        // Helper para crear selects
         const createSelect = (name, values) => {
             const select = document.createElement("select");
             select.name = name;
             select.innerHTML = `<option value="">${name.charAt(0).toUpperCase() + name.slice(1)}</option>` +
                 values.map(v => `<option value="${v}">${v}</option>`).join("");
             select.onchange = () => this.onFilter(this.getFilters(container));
+            selects.push(select);
             return select;
         };
         container.appendChild(createSelect("categories", this.options.categories));
@@ -20,6 +22,16 @@ export class Filters {
         container.appendChild(createSelect("duration", this.options.duration));
         container.appendChild(createSelect("mode", this.options.mode));
         container.appendChild(createSelect("publisher", this.options.publisher));
+        // Botón de reinicio
+        const resetBtn = document.createElement("button");
+        resetBtn.type = "button";
+        resetBtn.className = "reset-filters-btn";
+        resetBtn.textContent = "Reiniciar filtros";
+        resetBtn.onclick = () => {
+            selects.forEach(sel => sel.value = "");
+            this.onFilter(this.getFilters(container));
+        };
+        container.appendChild(resetBtn);
         return container;
     }
     getFilters(container) {
