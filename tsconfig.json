@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es6",                // Código JS que se generará
-    "module": "commonjs",
+    "target": "es6",
+    "module": "ES6",           // <--- CAMBIA ESTO
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "lib": ["es2016", "dom"]        // ⚡ IMPORTANTE: agrega es2016
+    "lib": ["es2016", "dom"]
   },
   "include": ["src/**/*"]
 }
