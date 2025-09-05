@@ -1,0 +1,103 @@
+import { games } from "./data/games";
+import { GameCard } from "./components/GameCard";
+import { SearchBar } from "./components/SearchBar";
+import { Filters, FilterOptions } from "./components/Filters";
+import { Pagination } from "./components/Pagination";
+import { filterGames } from "./utils/filter";
+import { sortGames, SortOrder } from "./utils/sort";
+import { paginateGames } from "./utils/pagination";
+import { Game } from "./models/Game";
+
+const GAMES_PER_PAGE_DEFAULT = 10;
+const AUTOCOMPLETE_RESULTS = 5;
+
+let currentPage = 1;
+let itemsPerPage = GAMES_PER_PAGE_DEFAULT;
+let currentFilters: Record<string, string> = {};
+let currentSort: SortOrder = "az";
+let filteredGames = games;
+
+function getFilterOptions(): FilterOptions {
+  return {
+    categories: Array.from(new Set(games.flatMap((g: Game) => g.categories))),
+    players: Array.from(new Set(games.map(g => g.players))),
+    duration: Array.from(new Set(games.map(g => g.duration))),
+    mode: Array.from(new Set(games.map(g => g.mode))),
+    publisher: Array.from(new Set(games.map(g => g.publisher))),
+  };
+}
+
+function renderGamesList() {
+  const container = document.getElementById("games-list");
+  if (!container) return;
+  container.innerHTML = "";
+  const paginated = paginateGames(filteredGames, currentPage, itemsPerPage);
+  paginated.forEach(game => {
+    const card = new GameCard(game).render();
+    container.appendChild(card);
+  });
+}
+
+function update() {
+  filteredGames = filterGames(games, currentFilters);
+  filteredGames = sortGames(filteredGames, currentSort);
+  currentPage = 1;
+  renderGamesList();
+  renderPagination();
+}
+
+function renderPagination() {
+  const container = document.getElementById("pagination");
+  if (!container) return;
+  container.innerHTML = "";
+  const pagination = new Pagination(filteredGames.length, itemsPerPage, (page, perPage) => {
+    currentPage = page;
+    itemsPerPage = perPage;
+    renderGamesList();
+    renderPagination();
+  });
+  container.appendChild(pagination.render(currentPage));
+}
+
+function setup() {
+  // Search bar
+  const searchContainer = document.getElementById("search-bar");
+  if (searchContainer) {
+    const searchBar = new SearchBar(games, (game) => {
+      window.location.href = `detalle.html?id=${game.id}`;
+    }, AUTOCOMPLETE_RESULTS);
+    searchContainer.appendChild(searchBar.render());
+  }
+
+  // Filters
+  const filtersContainer = document.getElementById("filters");
+  if (filtersContainer) {
+    const filters = new Filters(getFilterOptions(), (filters) => {
+      currentFilters = filters;
+      update();
+    });
+    filtersContainer.appendChild(filters.render());
+  }
+
+  // Sort
+  const sortContainer = document.getElementById("sort-bar");
+  if (sortContainer) {
+    sortContainer.innerHTML = `
+      <select id="sort-select">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+        <option value="newest">Más nuevo</option>
+        <option value="oldest">Más viejo</option>
+      </select>
+    `;
+    const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
+    sortSelect.onchange = () => {
+      currentSort = sortSelect.value as SortOrder;
+      update();
+    };
+  }
+
+  update();
+}
+
+document.addEventListener("DOMContentLoaded", setup);
