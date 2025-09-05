@@ -12,8 +12,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Construye y expande tu colonia en la isla de Catan, comerciando y gestionando recursos para ganar puntos de victoria.",
     rules: "Cada jugador tira los dados, recibe recursos, comercia y construye caminos, asentamientos y ciudades. Gana el primero en llegar a 10 puntos de victoria.",
-    videoUrl: "catan.mp4", //TODO
-    mainImage: "catan.jpg",
+    videoUrl: "assets/video/catan.mp4", //TODO
+    mainImage: "assets/img/catan.jpg",
     secondaryImages: ["catan_1.jpg", "catan_2.jpg", "catan.jpeg"],
     purchaseOrder: 1 //TODO
   },
@@ -28,8 +28,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Expansión de Catan que añade navegación y nuevas islas para explorar.",
     rules: "Incluye reglas de navegación y escenarios adicionales. Requiere el juego base.",
-    videoUrl: "catanNavegantes.mp4", //TODO
-    mainImage: "catanNavegantes1.jpg",
+    videoUrl: "assets/video/catanNavegantes.mp4", //TODO
+    mainImage: "assets/img/catanNavegantes1.jpg",
     secondaryImages: ["catanNavegantes2.jpg"],
     purchaseOrder: 2 //TODO
   },
@@ -44,8 +44,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Edición especial de Catan que incluye expansiones y minijuegos.",
     rules: "Incluye reglas del juego base y de las expansiones incluidas.",
-    videoUrl: "catanPlus.mp4", //TODO
-    mainImage: "catanPlus1.jpg",
+    videoUrl: "assets/video/catanPlus.mp4", //TODO
+    mainImage: "assets/img/catanPlus1.jpg",
     secondaryImages: ["catanPlus2.jpg"],
     purchaseOrder: 3 //TODO
   },
@@ -60,8 +60,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de estrategia clásico donde dos jugadores intentan dar jaque mate al rey rival.",
     rules: "Cada jugador mueve sus piezas por turnos según las reglas del ajedrez. Gana quien da jaque mate.",
-    videoUrl: "ajedrez.mp4", //TODO
-    mainImage: "ajedrez1.jpg",
+    videoUrl: "assets/video/ajedrez.mp4", //TODO
+    mainImage: "assets/img/ajedrez1.jpg",
     secondaryImages: [],
     purchaseOrder: 4 //TODO
   },
@@ -76,8 +76,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de mesa clásico donde los jugadores mueven sus fichas según el resultado de los dados.",
     rules: "El objetivo es sacar todas tus fichas del tablero antes que tu oponente.",
-    videoUrl: "backgammon.mp4", //TODO
-    mainImage: "backgammon.jpg",
+    videoUrl: "assets/video/backgammon.mp4", //TODO
+    mainImage: "assets/img/backgammon.jpg",
     secondaryImages: [],
     purchaseOrder: 5 //TODO
   },
@@ -92,8 +92,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Baraja tradicional española para juegos como Brisca, Mus, Tute, etc.",
     rules: "Depende del juego jugado.",
-    videoUrl: "barajaEspanola.mp4", //TODO
-    mainImage: "barajaEspañola1.jpg",
+    videoUrl: "assets/video/barajaEspanola.mp4", //TODO
+    mainImage: "assets/img/barajaEspañola1.jpg",
     secondaryImages: [],
     purchaseOrder: 6 //TODO
   },
@@ -108,8 +108,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Baraja de poker dorada para juegos como Poker, Blackjack, etc.",
     rules: "Depende del juego jugado.",
-    videoUrl: "barajaPokerDorada.mp4", //TODO
-    mainImage: "barajaPokerDorada1.jpg",
+    videoUrl: "assets/video/barajaPokerDorada.mp4", //TODO
+    mainImage: "assets/img/barajaPokerDorada1.jpg",
     secondaryImages: [],
     purchaseOrder: 7 //TODO
   },
@@ -124,8 +124,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Baraja de poker plateada para juegos como Poker, Blackjack, etc.",
     rules: "Depende del juego jugado.",
-    videoUrl: "barajaPokerPlateada.mp4", //TODO
-    mainImage: "barajaPokerPlateada1.jpg",
+    videoUrl: "assets/video/barajaPokerPlateada.mp4", //TODO
+    mainImage: "assets/img/barajaPokerPlateada1.jpg",
     secondaryImages: [],
     purchaseOrder: 8 //TODO
   },
@@ -140,8 +140,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de palabras donde los jugadores deben escribir palabras que empiecen con una letra determinada.",
     rules: "Se elige una letra y los jugadores deben escribir palabras en diferentes categorías lo más rápido posible.",
-    videoUrl: "bastaOriginal.mp4", //TODO
-    mainImage: "bastaOriginal.jpg",
+    videoUrl: "assets/video/bastaOriginal.mp4", //TODO
+    mainImage: "assets/img/bastaOriginal.jpg",
     secondaryImages: [],
     purchaseOrder: 9 //TODO
   },
@@ -156,8 +156,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de estrategia donde los jugadores intentan hundir la flota de su oponente.",
     rules: "Coloca tus barcos en el tablero y adivina las posiciones de los barcos rivales.",
-    videoUrl: "battleShip.mp4", //TODO
-    mainImage: "battleShip1.jpg",
+    videoUrl: "assets/video/battleShip.mp4", //TODO
+    mainImage: "assets/img/battleShip1.jpg",
     secondaryImages: ["battleShip2.jpg"],
     purchaseOrder: 10 //TODO
   },
@@ -172,8 +172,8 @@ export const games: Game[] = [
     mode: "Equipos",
     description: "Juego de adivinanza y mímica sobre películas, ideal para fiestas.",
     rules: "Los equipos compiten adivinando películas a través de mímica, frases y palabras clave.",
-    videoUrl: "blockbuster.mp4", //TODO
-    mainImage: "blockbuster1.jpg",
+    videoUrl: "assets/video/blockbuster.mp4", //TODO
+    mainImage: "assets/img/blockbuster1.jpg",
     secondaryImages: [],
     purchaseOrder: 11 //TODO
   },
@@ -188,8 +188,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de mesa clásico para niños donde avanzas por un tablero de caramelos.",
     rules: "Los jugadores avanzan según las cartas de colores, el primero en llegar al final gana.",
-    videoUrl: "candyLand.mp4", //TODO
-    mainImage: "candyLand1.jpg",
+    videoUrl: "assets/video/candyLand.mp4", //TODO
+    mainImage: "assets/img/candyLand1.jpg",
     secondaryImages: [],
     purchaseOrder: 12 //TODO
   },
@@ -204,8 +204,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego tradicional de habilidad con canicas.",
     rules: "Los jugadores lanzan canicas para sacar las de los demás de un círculo.",
-    videoUrl: "canicas.mp4", //TODO
-    mainImage: "canicas1.jpg",
+    videoUrl: "assets/video/canicas.mp4", //TODO
+    mainImage: "assets/img/canicas1.jpg",
     secondaryImages: ["canicas2.jpg", "canicas3.jpg"],
     purchaseOrder: 13 //TODO
   },
@@ -220,8 +220,8 @@ export const games: Game[] = [
     mode: "Equipos",
     description: "Juego de mímica donde los jugadores deben adivinar palabras o frases.",
     rules: "Un jugador actúa y su equipo debe adivinar la palabra antes de que se acabe el tiempo.",
-    videoUrl: "carasYGestos.mp4", //TODO
-    mainImage: "carasYGestos.jpg",
+    videoUrl: "assets/video/carasYGestos.mp4", //TODO
+    mainImage: "assets/img/carasYGestos.jpg",
     secondaryImages: ["carasYGestos1.jpg", "carasYGestos2.jpg"],
     purchaseOrder: 14 //TODO
   },
@@ -236,8 +236,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas y apuestas con temática de casino.",
     rules: "Depende de la variante jugada.",
-    videoUrl: "casinoFabuloso.mp4", //TODO
-    mainImage: "casinoFabuloso1.jpg",
+    videoUrl: "assets/video/casinoFabuloso.mp4", //TODO
+    mainImage: "assets/img/casinoFabuloso1.jpg",
     secondaryImages: ["casinoFabuloso2.jpg"],
     purchaseOrder: 15 //TODO
   },
@@ -252,8 +252,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de deducción donde los jugadores intentan resolver un asesinato.",
     rules: "Los jugadores hacen preguntas y deducen quién, con qué arma y en qué lugar ocurrió el crimen.",
-    videoUrl: "clue.mp4", //TODO
-    mainImage: "clue1.jpg",
+    videoUrl: "assets/video/clue.mp4", //TODO
+    mainImage: "assets/img/clue1.jpg",
     secondaryImages: [],
     purchaseOrder: 16 //TODO
   },
@@ -268,8 +268,8 @@ export const games: Game[] = [
     mode: "Individual",
     description: "El clásico cubo de Rubik 3x3 para resolver rompecabezas.",
     rules: "Gira las caras del cubo hasta que cada una tenga un solo color.",
-    videoUrl: "cuboRubik3x3.mp4", //TODO
-    mainImage: "cuboRubik3x3.jpg",
+    videoUrl: "assets/video/cuboRubik3x3.mp4", //TODO
+    mainImage: "assets/img/cuboRubik3x3.jpg",
     secondaryImages: [],
     purchaseOrder: 17 //TODO
   },
@@ -284,8 +284,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego clásico donde los jugadores intentan mover todas sus piezas al lado opuesto del tablero.",
     rules: "Mueve tus piezas saltando sobre otras para llegar al lado opuesto.",
-    videoUrl: "damasChinas.mp4", //TODO
-    mainImage: "damasChinas.jpg",
+    videoUrl: "assets/video/damasChinas.mp4", //TODO
+    mainImage: "assets/img/damasChinas.jpg",
     secondaryImages: [],
     purchaseOrder: 18 //TODO
   },
@@ -300,8 +300,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de trivia con preguntas sobre películas y personajes de Disney.",
     rules: "Responde preguntas de trivia para avanzar en el tablero.",
-    videoUrl: "disneyMania.mp4", //TODO
-    mainImage: "disneyMania1.jpg",
+    videoUrl: "assets/video/disneyMania.mp4", //TODO
+    mainImage: "assets/img/disneyMania1.jpg",
     secondaryImages: [],
     purchaseOrder: 19 //TODO
   },
@@ -316,8 +316,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de trivia y retos para toda la familia.",
     rules: "Responde preguntas y supera retos para avanzar.",
-    videoUrl: "divertilandiaExtrema.mp4", //TODO
-    mainImage: "divertilandiaExtrema1.jpg",
+    videoUrl: "assets/video/divertilandiaExtrema.mp4", //TODO
+    mainImage: "assets/img/divertilandiaExtrema1.jpg",
     secondaryImages: ["divertilandiaExtrema2.jpg"],
     purchaseOrder: 20 //TODO
   },
@@ -334,8 +334,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego clásico de fichas donde los jugadores deben emparejar los números.",
     rules: "Coloca fichas emparejando los números en los extremos. Gana quien se quede sin fichas primero.",
-    videoUrl: "dominoClasico.mp4", //TODO
-    mainImage: "dominoClasico.jpg",
+    videoUrl: "assets/video/dominoClasico.mp4", //TODO
+    mainImage: "assets/img/dominoClasico.jpg",
     secondaryImages: [],
     purchaseOrder: 21 //TODO
   },
@@ -350,8 +350,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión de dominó con fichas de resina.",
     rules: "Coloca fichas emparejando los números en los extremos. Gana quien se quede sin fichas primero.",
-    videoUrl: "dominoResina.mp4", //TODO
-    mainImage: "dominoResina.jpg",
+    videoUrl: "assets/video/dominoResina.mp4", //TODO
+    mainImage: "assets/img/dominoResina.jpg",
     secondaryImages: [],
     purchaseOrder: 22 //TODO
   },
@@ -366,8 +366,8 @@ export const games: Game[] = [
     mode: "Cooperativo",
     description: "Juego de escape room de mesa donde los jugadores resuelven acertijos para escapar.",
     rules: "Resuelve los acertijos y sigue la historia para completar el reto.",
-    videoUrl: "exit.mp4", //TODO
-    mainImage: "exit.jpg",
+    videoUrl: "assets/video/exit.mp4", //TODO
+    mainImage: "assets/img/exit.jpg",
     secondaryImages: [],
     purchaseOrder: 23 //TODO
   },
@@ -382,8 +382,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de trivia con preguntas sobre historia mundial.",
     rules: "Responde preguntas de historia para avanzar en el tablero.",
-    videoUrl: "historyChannel.mp4", //TODO
-    mainImage: "historyChannel1.jpg",
+    videoUrl: "assets/video/historyChannel.mp4", //TODO
+    mainImage: "assets/img/historyChannel1.jpg",
     secondaryImages: [],
     purchaseOrder: 24 //TODO
   },
@@ -398,8 +398,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de mesa musical donde debes adivinar canciones y ordenarlas cronológicamente.",
     rules: "Escucha fragmentos de canciones y colócalas en la línea de tiempo.",
-    videoUrl: "hitster.mp4", //TODO
-    mainImage: "hitster1.jpg",
+    videoUrl: "assets/video/hitster.mp4", //TODO
+    mainImage: "assets/img/hitster1.jpg",
     secondaryImages: ["hitster2.jpg"],
     purchaseOrder: 25 //TODO
   },
@@ -414,8 +414,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de habilidad donde los jugadores retiran bloques de una torre sin que se caiga.",
     rules: "En tu turno, retira un bloque y colócalo arriba. Pierde quien derribe la torre.",
-    videoUrl: "jenga.mp4", //TODO
-    mainImage: "jenga1.jpg", //TODO (ajusta si el nombre es diferente)
+    videoUrl: "assets/video/jenga.mp4", //TODO
+    mainImage: "assets/img/jenga1.jpg", //TODO (ajusta si el nombre es diferente)
     secondaryImages: [],
     purchaseOrder: 26 //TODO
   },
@@ -430,8 +430,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas donde debes engañar a los demás sobre las cartas que juegas.",
     rules: "Juega cartas boca abajo y declara su valor. Los demás pueden creer o dudar.",
-    videoUrl: "liar.mp4", //TODO
-    mainImage: "liar1.jpg",
+    videoUrl: "assets/video/liar.mp4", //TODO
+    mainImage: "assets/img/liar1.jpg",
     secondaryImages: [],
     purchaseOrder: 27 //TODO
   },
@@ -446,8 +446,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión de Mario Bros del clásico Juego de la Vida.",
     rules: "Avanza por el tablero tomando decisiones y recolectando monedas.",
-    videoUrl: "lifeMario.mp4", //TODO
-    mainImage: "lifeMario1.jpg",
+    videoUrl: "assets/video/lifeMario.mp4", //TODO
+    mainImage: "assets/img/lifeMario1.jpg",
     secondaryImages: [],
     purchaseOrder: 28 //TODO
   },
@@ -462,8 +462,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión moderna del clásico juego de lotería mexicana.",
     rules: "Marca las cartas que salgan y completa tu tabla para ganar.",
-    videoUrl: "loteriaMillenial.mp4", //TODO
-    mainImage: "loteriaMillenial.jpg",
+    videoUrl: "assets/video/loteriaMillenial.mp4", //TODO
+    mainImage: "assets/img/loteriaMillenial.jpg",
     secondaryImages: [],
     purchaseOrder: 29 //TODO
   },
@@ -478,8 +478,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de trivia mexicano con preguntas de cultura general.",
     rules: "Responde preguntas correctamente para avanzar en el tablero.",
-    videoUrl: "maratonClasico.mp4", //TODO
-    mainImage: "maratonClasico.jpg",
+    videoUrl: "assets/video/maratonClasico.mp4", //TODO
+    mainImage: "assets/img/maratonClasico.jpg",
     secondaryImages: [],
     purchaseOrder: 30 //TODO
   },
@@ -494,8 +494,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas con temática de lucha libre y superhéroes de Marvel.",
     rules: "Juega cartas para atacar y defender, gana quien quede en pie.",
-    videoUrl: "marvelLuchaLibre.mp4", //TODO
-    mainImage: "marvelLuchaLibre1.jpg",
+    videoUrl: "assets/video/marvelLuchaLibre.mp4", //TODO
+    mainImage: "assets/img/marvelLuchaLibre1.jpg",
     secondaryImages: ["marvelLuchaLibre2.jpg"],
     purchaseOrder: 31 //TODO
   },
@@ -510,8 +510,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de preguntas para descubrir cuánto conoces a tus amigos.",
     rules: "Responde preguntas sobre los demás jugadores.",
-    videoUrl: "mejorPeorAmigo.mp4", //TODO
-    mainImage: "mejorPeorAmigo1.jpg",
+    videoUrl: "assets/video/mejorPeorAmigo.mp4", //TODO
+    mainImage: "assets/img/mejorPeorAmigo1.jpg",
     secondaryImages: ["mejorPeorAmigo2.jpg"],
     purchaseOrder: 32 //TODO
   },
@@ -526,8 +526,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de preguntas donde no puedes responder ni 'sí' ni 'no'.",
     rules: "Responde preguntas sin decir 'sí' o 'no'.",
-    videoUrl: "niSiNiNo.mp4", //TODO
-    mainImage: "niSiNiNo1.jpg",
+    videoUrl: "assets/video/niSiNiNo.mp4", //TODO
+    mainImage: "assets/img/niSiNiNo1.jpg",
     secondaryImages: [],
     purchaseOrder: 33 //TODO
   },
@@ -542,8 +542,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas donde los jugadores deben completar fases específicas antes que los demás.",
     rules: "Completa las fases en orden antes que los demás jugadores.",
-    videoUrl: "phase10.mp4", //TODO
-    mainImage: "phase10.jpg",
+    videoUrl: "assets/video/phase10.mp4", //TODO
+    mainImage: "assets/img/phase10.jpg",
     secondaryImages: [],
     purchaseOrder: 34 //TODO
   },
@@ -558,8 +558,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de mesa donde los jugadores deben imitar fotos divertidas.",
     rules: "Imita la foto que te toque y gana puntos por creatividad.",
-    videoUrl: "risasFotograficas.mp4", //TODO
-    mainImage: "risasFotograficas.jpg",
+    videoUrl: "assets/video/risasFotograficas.mp4", //TODO
+    mainImage: "assets/img/risasFotograficas.jpg",
     secondaryImages: [],
     purchaseOrder: 35 //TODO
   },
@@ -574,8 +574,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas clásico donde los jugadores forman combinaciones de cartas.",
     rules: "Forma tríos, escaleras y gana puntos.",
-    videoUrl: "rummy.mp4", //TODO
-    mainImage: "rummy.jpg",
+    videoUrl: "assets/video/rummy.mp4", //TODO
+    mainImage: "assets/img/rummy.jpg",
     secondaryImages: [],
     purchaseOrder: 36 //TODO
   },
@@ -590,8 +590,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión de Star Wars del clásico juego de palabras Scrabble.",
     rules: "Forma palabras en el tablero para ganar puntos.",
-    videoUrl: "scrabbleStarWars.mp4", //TODO
-    mainImage: "scrabbleStarWars1.jpg",
+    videoUrl: "assets/video/scrabbleStarWars.mp4", //TODO
+    mainImage: "assets/img/scrabbleStarWars1.jpg",
     secondaryImages: ["scrabbleStarWars2.jpeg", "scrabbleStarWars3.jpg"],
     purchaseOrder: 37 //TODO
   },
@@ -606,8 +606,8 @@ export const games: Game[] = [
     mode: "Equipos",
     description: "Juego de cartas y tablero donde debes formar líneas de cinco fichas.",
     rules: "Coloca fichas en el tablero según las cartas jugadas. Gana quien forme dos secuencias.",
-    videoUrl: "sequence.mp4", //TODO
-    mainImage: "sequence1.jpg",
+    videoUrl: "assets/video/sequence.mp4", //TODO
+    mainImage: "assets/img/sequence1.jpg",
     secondaryImages: ["sequence2.jpg"],
     purchaseOrder: 38 //TODO
   },
@@ -622,8 +622,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de estrategia donde debes capturar la bandera del oponente.",
     rules: "Coloca tus piezas estratégicamente y ataca las del rival.",
-    videoUrl: "stratego.mp4", //TODO
-    mainImage: "stratego1.jpg",
+    videoUrl: "assets/video/stratego.mp4", //TODO
+    mainImage: "assets/img/stratego1.jpg",
     secondaryImages: ["stratego2.jpeg"],
     purchaseOrder: 39 //TODO
   },
@@ -638,8 +638,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas con temas para conversar y debatir.",
     rules: "Saca una carta y conversa sobre el tema propuesto.",
-    videoUrl: "temasDeSobremesa.mp4", //TODO
-    mainImage: "temasDeSobremesa1.jpg",
+    videoUrl: "assets/video/temasDeSobremesa.mp4", //TODO
+    mainImage: "assets/img/temasDeSobremesa1.jpg",
     secondaryImages: ["temasDeSobremesa2.jpg"],
     purchaseOrder: 40 //TODO
   },
@@ -654,8 +654,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión de mesa del clásico videojuego Tetris.",
     rules: "Coloca piezas para completar líneas y ganar puntos.",
-    videoUrl: "tetris.mp4", //TODO
-    mainImage: "tetris1.jpg",
+    videoUrl: "assets/video/tetris.mp4", //TODO
+    mainImage: "assets/img/tetris1.jpg",
     secondaryImages: [],
     purchaseOrder: 41 //TODO
   },
@@ -670,8 +670,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de memoria y engaño donde debes recordar qué objeto tiene cada jugador.",
     rules: "Pasa cartas y recuerda qué objeto tiene cada uno.",
-    videoUrl: "thatsNotAHat.mp4", //TODO
-    mainImage: "thatsNotAHat1.jpg",
+    videoUrl: "assets/video/thatsNotAHat.mp4", //TODO
+    mainImage: "assets/img/thatsNotAHat1.jpg",
     secondaryImages: [],
     purchaseOrder: 42 //TODO
   },
@@ -686,8 +686,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de puntería donde debes acertar a un blanco con dardos o pelotas.",
     rules: "Lanza y suma puntos según el lugar donde aciertes.",
-    videoUrl: "tiroAlBlanco.mp4", //TODO
-    mainImage: "tiroAlBlanco1.jpg",
+    videoUrl: "assets/video/tiroAlBlanco.mp4", //TODO
+    mainImage: "assets/img/tiroAlBlanco1.jpg",
     secondaryImages: [],
     purchaseOrder: 43 //TODO
   },
@@ -702,8 +702,8 @@ export const games: Game[] = [
     mode: "Equipos",
     description: "Juego de trivia donde compiten generaciones jóvenes contra mayores.",
     rules: "Responde preguntas de cultura general y gana puntos para tu equipo.",
-    videoUrl: "triviaChavosVsRucos.mp4", //TODO
-    mainImage: "triviaChavosVsRucos1.jpg",
+    videoUrl: "assets/video/triviaChavosVsRucos.mp4", //TODO
+    mainImage: "assets/img/triviaChavosVsRucos1.jpg",
     secondaryImages: ["triviaChavosVsRucos2.jpg"],
     purchaseOrder: 44 //TODO
   },
@@ -718,8 +718,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión mexicana del clásico Monopoly.",
     rules: "Compra propiedades, cobra rentas y evita la bancarrota.",
-    videoUrl: "turistaDeLaSuerte.mp4", //TODO
-    mainImage: "turistaDeLaSuerte1.jpg",
+    videoUrl: "assets/video/turistaDeLaSuerte.mp4", //TODO
+    mainImage: "assets/img/turistaDeLaSuerte1.jpg",
     secondaryImages: ["turistaDeLaSuerte2.jpg"],
     purchaseOrder: 45 //TODO
   },
@@ -734,8 +734,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión de Turista con temática de Disneyland.",
     rules: "Compra propiedades y recorre Disneyland para ganar.",
-    videoUrl: "turistaDisneyland.mp4", //TODO
-    mainImage: "turistaDisneyland1.jpg",
+    videoUrl: "assets/video/turistaDisneyland.mp4", //TODO
+    mainImage: "assets/img/turistaDisneyland1.jpg",
     secondaryImages: ["turistaDisneyland2.jpeg"],
     purchaseOrder: 46 //TODO
   },
@@ -750,8 +750,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Versión de Turista con temática de Dragon Ball.",
     rules: "Compra propiedades y recorre el mundo de Dragon Ball.",
-    videoUrl: "turistaDragonBall.mp4", //TODO
-    mainImage: "turistaDragonBall1.jpg",
+    videoUrl: "assets/video/turistaDragonBall.mp4", //TODO
+    mainImage: "assets/img/turistaDragonBall1.jpg",
     secondaryImages: ["turistaDragonBall2.jpg"],
     purchaseOrder: 47 //TODO
   },
@@ -766,8 +766,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas donde debes deshacerte de todas tus cartas antes que los demás.",
     rules: "Juega cartas del mismo color o número y usa cartas especiales para cambiar el juego.",
-    videoUrl: "uno.mp4", //TODO
-    mainImage: "uno.jpg",
+    videoUrl: "assets/video/uno.mp4", //TODO
+    mainImage: "assets/img/uno.jpg",
     secondaryImages: [],
     purchaseOrder: 48 //TODO
   },
@@ -782,8 +782,8 @@ export const games: Game[] = [
     mode: "Cooperativo",
     description: "Juego de cartas para profundizar relaciones y conocerse mejor.",
     rules: "Responde preguntas personales y reflexiona con los demás jugadores.",
-    videoUrl: "weAreNotReallyStrangers.mp4", //TODO
-    mainImage: "weAreNotReallyStrangers1.jpg",
+    videoUrl: "assets/video/weAreNotReallyStrangers.mp4", //TODO
+    mainImage: "assets/img/weAreNotReallyStrangers1.jpg",
     secondaryImages: [],
     purchaseOrder: 49 //TODO
   },
@@ -798,8 +798,8 @@ export const games: Game[] = [
     mode: "Competitivo",
     description: "Juego de cartas coleccionables donde los jugadores invocan monstruos y lanzan hechizos para derrotar a su oponente.",
     rules: "Construye tu mazo y reduce los puntos de vida del rival a cero.",
-    videoUrl: "yuGiOh.mp4", //TODO
-    mainImage: "yuGiOh1.jpg",
+    videoUrl: "assets/video/yuGiOh.mp4", //TODO
+    mainImage: "assets/img/yuGiOh1.jpg",
     secondaryImages: [],
     purchaseOrder: 50 //TODO
   }
