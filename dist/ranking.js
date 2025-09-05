@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const games_1 = require("./data/games");
+import { games } from "./data/games";
 // Función para renderizar ranking en la tabla
 function renderRanking(gamesList) {
     const tbody = document.querySelector("#ranking-table tbody");
@@ -24,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const applyBtn = document.getElementById("apply-ranking");
     const applyRanking = () => {
         const category = categorySelect.value;
-        const filtered = category ? games_1.games.filter(g => g.categories.includes(category)) : games_1.games;
+        const filtered = category ? games.filter(g => g.categories.includes(category)) : games;
         renderRanking(filtered);
     };
     applyBtn === null || applyBtn === void 0 ? void 0 : applyBtn.addEventListener("click", applyRanking);
     // Render inicial con todas las categorías
-    renderRanking(games_1.games);
+    renderRanking(games);
 });

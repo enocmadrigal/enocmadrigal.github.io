@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const games_1 = require("./data/games");
+import { games } from "./data/games";
 // Función para obtener parámetro de URL
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -40,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const idParam = getQueryParam("id");
     if (!idParam)
         return;
-    const game = games_1.games.find(g => g.id.toString() === idParam);
+    const game = games.find(g => g.id.toString() === idParam);
     if (game)
         renderGameDetails(game);
 });

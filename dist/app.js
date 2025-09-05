@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const games_1 = require("./data/games");
+import { games } from "./data/games";
 // Configuración
 let gamesPerPage = 5;
 let currentPage = 1;
-let filteredGames = [...games_1.games];
+let filteredGames = [...games];
 // Render tarjetas
 function renderGames() {
     const container = document.getElementById("games-container");
@@ -53,7 +51,7 @@ searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventLi
     if (!autocompleteContainer)
         return;
     const value = searchInput.value.toLowerCase();
-    const matches = games_1.games.filter(g => g.title.toLowerCase().includes(value)).slice(0, 5);
+    const matches = games.filter(g => g.title.toLowerCase().includes(value)).slice(0, 5);
     autocompleteContainer.innerHTML = matches
         .map(g => `<div class="autocomplete-item">
               <img src="${g.image}" alt="${g.title}">
@@ -72,7 +70,7 @@ const filterPlayers = document.getElementById("filter-players");
 const filterDuration = document.getElementById("filter-duration");
 const filterAge = document.getElementById("filter-age");
 function applyFilters() {
-    filteredGames = games_1.games.filter(game => {
+    filteredGames = games.filter(game => {
         const catMatch = !filterCategory.value || game.categories.includes(filterCategory.value);
         const playersMatch = !filterPlayers.value || game.players === filterPlayers.value;
         const durationMatch = !filterDuration.value || game.duration.includes(filterDuration.value);

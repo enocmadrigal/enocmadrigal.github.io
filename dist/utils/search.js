@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Search = void 0;
-class Search {
+export class Search {
     constructor(games, maxResults = 5) {
         this.games = games;
         this.maxResults = maxResults;
@@ -33,4 +30,3 @@ class Search {
             .join("");
     }
 }
-exports.Search = Search;
