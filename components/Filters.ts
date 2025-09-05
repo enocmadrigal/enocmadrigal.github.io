@@ -20,11 +20,20 @@ export class Filters {
 
     const selects: HTMLSelectElement[] = [];
 
+    // Traducción de nombres de filtros
+    const filterLabels: Record<string, string> = {
+      categories: "Categoría",
+      players: "Jugadores",
+      duration: "Duración",
+      mode: "Modo",
+      publisher: "Editorial"
+    };
+
     // Helper para crear selects
     const createSelect = (name: string, values: string[]) => {
       const select = document.createElement("select");
       select.name = name;
-      select.innerHTML = `<option value="">${name.charAt(0).toUpperCase() + name.slice(1)}</option>` +
+      select.innerHTML = `<option value="">${filterLabels[name]}</option>` +
         values.map(v => `<option value="${v}">${v}</option>`).join("");
       select.onchange = () => this.onFilter(this.getFilters(container));
       selects.push(select);

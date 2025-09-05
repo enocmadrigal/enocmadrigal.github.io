@@ -13,6 +13,21 @@ header, footer {
   text-align: center;
 }
 
+/* Nuevo estilo para el título Ludoteca */
+header h1 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin: 2rem 0 1.5rem 0;
+  text-shadow: 0 2px 8px #0002;
+}
+
 footer {
   border-top: 1px solid #eee;
   border-bottom: none;
@@ -113,7 +128,7 @@ h1, h2 {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  background: linear-gradient(90deg, #b2f0e6 0%, #a7c7e7 100%);
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -133,7 +148,7 @@ h1, h2 {
 }
 .filters select:hover,
 .filters select:focus {
-  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
   box-shadow: 0 4px 16px #0002;
 }
 
