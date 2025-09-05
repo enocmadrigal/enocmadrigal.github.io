@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es6",              // Código JS que generará
-    "module": "commonjs",         // Sistema de módulos
-    "outDir": "./dist",            // Carpeta donde se generará JS compilado
-    "rootDir": "./src",            // Carpeta donde está tu TS
-    "strict": true,                // Reglas estrictas de TS
-    "esModuleInterop": true,       // Para compatibilidad con import/export
+    "target": "es6",                // Código JS que se generará
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "lib": ["es2016", "dom"]        // ⚡ IMPORTANTE: agrega es2016
   },
   "include": ["src/**/*"]
 }

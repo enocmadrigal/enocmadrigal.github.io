@@ -1,45 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ludoteca - Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Mi Ludoteca</h1>
+  <h1>Ludoteca</h1>
 
+  <!-- ------------------- -->
   <!-- Buscador -->
   <div class="search-container">
-    <input type="text" id="search-input" placeholder="Buscar juegos...">
+    <input type="text" id="search-input" placeholder="Buscar juego...">
     <div id="autocomplete-results" class="autocomplete-container"></div>
   </div>
 
+  <!-- ------------------- -->
   <!-- Filtros -->
   <div class="filters-container">
     <select id="filter-category" class="filter-select">
-      <option value="">Categoría</option>
-      <option value="estrategia">Estrategia</option>
-      <option value="familia">Familia</option>
+      <option value="">Todas las categorías</option>
+      <option value="Estrategia">Estrategia</option>
+      <option value="Familiar">Familiar</option>
+      <option value="Party">Party</option>
+      <!-- Agrega más según tu metadata -->
     </select>
+
     <select id="filter-players" class="filter-select">
-      <option value="">Jugadores</option>
-      <option value="2-4">2-4</option>
-      <option value="3-6">3-6</option>
+      <option value="">Todos los jugadores</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3-4">3-4</option>
+      <option value="5+">5+</option>
     </select>
+
     <select id="filter-duration" class="filter-select">
-      <option value="">Duración</option>
-      <option value="30">30 min</option>
-      <option value="60">60 min</option>
+      <option value="">Cualquier duración</option>
+      <option value="Corta">Corta (&lt;30min)</option>
+      <option value="Media">Media (30-60min)</option>
+      <option value="Larga">Larga (&gt;60min)</option>
+    </select>
+
+    <select id="filter-age" class="filter-select">
+      <option value="">Todas las edades</option>
+      <option value="6">6+</option>
+      <option value="8">8+</option>
+      <option value="10">10+</option>
+      <option value="12">12+</option>
     </select>
   </div>
 
+  <!-- ------------------- -->
   <!-- Contenedor de juegos -->
   <div id="games-container" class="games-grid"></div>
 
-  <!-- Paginación -->
+  <!-- ------------------- -->
+  <!-- Controles de paginación -->
   <div id="pagination" class="pagination-container"></div>
 
+  <!-- Ajuste ruta JS compilado -->
   <script src="dist/app.js"></script>
 </body>
 </html>

@@ -1,18 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ranking de Juegos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Ranking de Juegos</h1>
 
-  <table id="ranking-table"></table>
+  <!-- Filtro de categorías para ranking -->
+  <div class="ranking-filters">
+    <select id="ranking-category">
+      <option value="">Todas las categorías</option>
+      <option value="Estrategia">Estrategia</option>
+      <option value="Familiar">Familiar</option>
+      <option value="Party">Party</option>
+      <!-- Agregar más según tu metadata -->
+    </select>
+    <button id="apply-ranking">Aplicar</button>
+  </div>
 
-  <a href="index.html">← Volver a la Home</a>
+  <!-- Tabla de ranking -->
+  <table id="ranking-table">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Juego</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
+  <a href="index.html">← Volver a Ludoteca</a>
+
+  <!-- Ajuste ruta JS compilado -->
   <script src="dist/ranking.js"></script>
 </body>
 </html>
