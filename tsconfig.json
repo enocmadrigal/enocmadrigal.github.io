@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",              // Código JS que generará
+    "module": "commonjs",         // Sistema de módulos
+    "outDir": "./dist",            // Carpeta donde se generará JS compilado
+    "rootDir": "./src",            // Carpeta donde está tu TS
+    "strict": true,                // Reglas estrictas de TS
+    "esModuleInterop": true,       // Para compatibilidad con import/export
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}

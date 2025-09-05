@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludoteca - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Mi Ludoteca</h1>
+
+  <!-- Buscador -->
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Buscar juegos...">
+    <div id="autocomplete-results" class="autocomplete-container"></div>
+  </div>
+
+  <!-- Filtros -->
+  <div class="filters-container">
+    <select id="filter-category" class="filter-select">
+      <option value="">Categoría</option>
+      <option value="estrategia">Estrategia</option>
+      <option value="familia">Familia</option>
+    </select>
+    <select id="filter-players" class="filter-select">
+      <option value="">Jugadores</option>
+      <option value="2-4">2-4</option>
+      <option value="3-6">3-6</option>
+    </select>
+    <select id="filter-duration" class="filter-select">
+      <option value="">Duración</option>
+      <option value="30">30 min</option>
+      <option value="60">60 min</option>
+    </select>
+  </div>
+
+  <!-- Contenedor de juegos -->
+  <div id="games-container" class="games-grid"></div>
+
+  <!-- Paginación -->
+  <div id="pagination" class="pagination-container"></div>
+
+  <script src="dist/app.js"></script>
+</body>
+</html>
