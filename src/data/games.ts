@@ -11,11 +11,11 @@ export const games: Game[] = [
     mode: "Individual o en equipos",
     description: "Construye y expande tu colonia en la isla de Catan.",
     rules: "Cada jugador recibe recursos según la tirada de dados y puede construir caminos, asentamientos y ciudades.",
-    video: "assets/videos/catan.mp4",
-    image: "assets/images/catan_main.jpg",
+    video: "public/assets/videos/catan.mp4",
+    image: "public/assets/img/catan_main.jpg",
     secondaryImages: [
-      "assets/images/catan_1.jpg",
-      "assets/images/catan_2.jpg"
+      "public/assets/img/catan_1.jpg",
+      "public/assets/img/catan_2.jpg"
     ],
     rankValue: 10,
     orderPurchased: 1
@@ -30,11 +30,11 @@ export const games: Game[] = [
     mode: "Individual",
     description: "Juego de cartas imaginativo donde cuentas historias con tus imágenes.",
     rules: "Un jugador elige una carta y da una pista. Los demás jugadores eligen cartas que coincidan con la pista y votan.",
-    video: "assets/videos/dixit.mp4",
-    image: "assets/images/dixit_main.jpg",
+    video: "public/assets/videos/dixit.mp4",
+    image: "public/assets/img/dixit_main.jpg",
     secondaryImages: [
-      "assets/images/dixit_1.jpg",
-      "assets/images/dixit_2.jpg"
+      "public/assets/img/dixit_1.jpg",
+      "public/assets/img/dixit_2.jpg"
     ],
     rankValue: 8,
     orderPurchased: 2
@@ -49,11 +49,11 @@ export const games: Game[] = [
     mode: "Individual",
     description: "Compite por terraformar Marte a través de proyectos y recursos.",
     rules: "Cada jugador usa cartas para incrementar temperatura, oxígeno y océanos y ganar puntos de victoria.",
-    video: "assets/videos/terraforming_mars.mp4",
-    image: "assets/images/terraforming_mars_main.jpg",
+    video: "public/assets/videos/terraforming_mars.mp4",
+    image: "public/assets/img/terraforming_mars_main.jpg",
     secondaryImages: [
-      "assets/images/terraforming_mars_1.jpg",
-      "assets/images/terraforming_mars_2.jpg"
+      "public/assets/img/terraforming_mars_1.jpg",
+      "public/assets/img/terraforming_mars_2.jpg"
     ],
     rankValue: 9,
     orderPurchased: 3
@@ -68,11 +68,11 @@ export const games: Game[] = [
     mode: "Individual",
     description: "Coloca baldosas de colores para completar patrones y ganar puntos.",
     rules: "En cada ronda, los jugadores eligen baldosas de la fábrica y las colocan en su tablero personal.",
-    video: "assets/videos/azul.mp4",
-    image: "assets/images/azul_main.jpg",
+    video: "public/assets/videos/azul.mp4",
+    image: "public/assets/img/azul_main.jpg",
     secondaryImages: [
-      "assets/images/azul_1.jpg",
-      "assets/images/azul_2.jpg"
+      "public/assets/img/azul_1.jpg",
+      "public/assets/img/azul_2.jpg"
     ],
     rankValue: 7,
     orderPurchased: 4
@@ -87,11 +87,11 @@ export const games: Game[] = [
     mode: "Individual",
     description: "Conecta ciudades con trenes y completa rutas para ganar puntos.",
     rules: "Los jugadores roban cartas, colocan trenes en rutas y completan tickets de destino.",
-    video: "assets/videos/ticket_to_ride.mp4",
-    image: "assets/images/ticket_to_ride_main.jpg",
+    video: "public/assets/videos/ticket_to_ride.mp4",
+    image: "public/assets/img/ticket_to_ride_main.jpg",
     secondaryImages: [
-      "assets/images/ticket_to_ride_1.jpg",
-      "assets/images/ticket_to_ride_2.jpg"
+      "public/assets/img/ticket_to_ride_1.jpg",
+      "public/assets/img/ticket_to_ride_2.jpg"
     ],
     rankValue: 9,
     orderPurchased: 5
