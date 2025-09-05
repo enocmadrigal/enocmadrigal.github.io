@@ -1,5 +1,5 @@
-import { games } from "./data/games";
-import { GameDetail } from "./components/GameDetail";
+import { games } from "./data/games.js";
+import { GameDetail } from "./components/GameDetail.js";
 
 function getGameIdFromUrl(): number | null {
   const params = new URLSearchParams(window.location.search);

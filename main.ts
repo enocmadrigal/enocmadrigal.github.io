@@ -1,12 +1,11 @@
-import { games } from "./data/games";
-import { GameCard } from "./components/GameCard";
-import { SearchBar } from "./components/SearchBar";
-import { Filters, FilterOptions } from "./components/Filters";
-import { Pagination } from "./components/Pagination";
-import { filterGames } from "./utils/filter";
-import { sortGames, SortOrder } from "./utils/sort";
-import { paginateGames } from "./utils/pagination";
-import { Game } from "./models/Game";
+import { games } from "./data/games.js";
+import { GameCard } from "./components/GameCard.js";
+import { SearchBar } from "./components/SearchBar.js";
+import { Filters, FilterOptions } from "./components/Filters.js";
+import { Pagination } from "./components/Pagination.js";
+import { filterGames } from "./utils/filter.js";
+import { sortGames, SortOrder } from "./utils/sort.js";
+import { paginateGames } from "./utils/pagination.js";
 
 const GAMES_PER_PAGE_DEFAULT = 10;
 const AUTOCOMPLETE_RESULTS = 5;
@@ -19,11 +18,11 @@ let filteredGames = games;
 
 function getFilterOptions(): FilterOptions {
   return {
-    categories: Array.from(new Set(games.flatMap((g: Game) => g.categories))),
-    players: Array.from(new Set(games.map(g => g.players))),
-    duration: Array.from(new Set(games.map(g => g.duration))),
-    mode: Array.from(new Set(games.map(g => g.mode))),
-    publisher: Array.from(new Set(games.map(g => g.publisher))),
+    categories: Array.from(new Set(games.flatMap((g) => g.categories))),
+    players: Array.from(new Set(games.map((g) => g.players))),
+    duration: Array.from(new Set(games.map((g) => g.duration))),
+    mode: Array.from(new Set(games.map((g) => g.mode))),
+    publisher: Array.from(new Set(games.map((g) => g.publisher))),
   };
 }
 

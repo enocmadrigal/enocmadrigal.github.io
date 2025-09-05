@@ -1,5 +1,4 @@
 export const games = [
-    // Ejemplo de juego, agrega más según tu colección
     {
         id: 1,
         rankValue: 100,

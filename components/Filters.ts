@@ -1,4 +1,4 @@
-import { Game } from "../models/Game";
+import { Game } from "../models/Game.js";
 
 export interface FilterOptions {
   categories: string[];

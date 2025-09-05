@@ -1,4 +1,4 @@
-import { Game } from "../models/Game";
+import { Game } from "../models/Game.js";
 
 export function filterGames(games: Game[], filters: Record<string, string>): Game[] {
   return games.filter(game => {

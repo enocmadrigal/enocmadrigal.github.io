@@ -1,6 +1,6 @@
-import { games } from "./data/games";
-import { Ranking } from "./components/Ranking";
-import { Game } from "./models/Game";
+import { games } from "./data/games.js";
+import { Ranking } from "./components/Ranking.js";
+import { Game } from "./models/Game.js";
 
 function renderRanking() {
   const container = document.getElementById("ranking");

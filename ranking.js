@@ -1,5 +1,5 @@
-import { games } from "./data/games";
-import { Ranking } from "./components/Ranking";
+import { games } from "./data/games.js";
+import { Ranking } from "./components/Ranking.js";
 function renderRanking() {
     const container = document.getElementById("ranking");
     if (!container)

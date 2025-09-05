@@ -1,7 +1,6 @@
-import { Game } from "../models/Game";
+import { Game } from "../models/Game.js";
 
 export const games: Game[] = [
-  // Ejemplo de juego, agrega más según tu colección
   {
     id: 1,
     rankValue: 100,

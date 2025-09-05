@@ -1,4 +1,4 @@
-import { Game } from "../models/Game";
+import { Game } from "../models/Game.js";
 
 export type SortOrder = "az" | "za" | "newest" | "oldest";
 

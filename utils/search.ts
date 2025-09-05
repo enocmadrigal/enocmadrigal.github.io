@@ -1,4 +1,4 @@
-import { Game } from "../models/Game";
+import { Game } from "../models/Game.js";
 
 export function searchGames(games: Game[], query: string, maxResults: number): Game[] {
   if (!query) return [];
