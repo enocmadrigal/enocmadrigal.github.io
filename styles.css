@@ -2,7 +2,9 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 40%, #8134af 70%, #515bd4 100%);
+  /*Instagram-like gradient background
+  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 40%, #8134af 70%, #515bd4 100%);*/
+  background: linear-gradient(#f1f1f4 100%);
   color: #fff;
   min-height: 100vh;
 }
