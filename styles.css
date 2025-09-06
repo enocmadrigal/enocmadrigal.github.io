@@ -232,6 +232,14 @@ h1, h2 {
   color: #fff;
   box-shadow: 0 4px 16px #0002;
 }
+/* Botón de página seleccionada */
+.pagination button.active {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px #0002;
+  cursor: default;
+  pointer-events: none;
+}
 .pagination button[disabled] {
   background: #eee;
   color: #aaa;
