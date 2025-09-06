@@ -71,10 +71,19 @@ function setup() {
   // Filters
   const filtersContainer = document.getElementById("filters");
   if (filtersContainer) {
-    const filters = new Filters(getFilterOptions(), (filters) => {
-      currentFilters = filters;
-      update();
-    });
+    const filters = new Filters(
+      getFilterOptions(),
+      (filters) => {
+        currentFilters = filters;
+        update();
+      },
+      (newItemsPerPage) => { // <-- callback para juegos por página
+        itemsPerPage = newItemsPerPage;
+        currentPage = 1;
+        renderGamesList();
+        renderPagination();
+      }
+    );
     filtersContainer.appendChild(filters.render());
   }
 

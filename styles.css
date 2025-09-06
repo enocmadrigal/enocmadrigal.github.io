@@ -120,13 +120,28 @@ h1, h2 {
   margin-right: 0.7rem;
 }
 
-.filters {
+/* NUEVO: Agrupación y centrado de filtros y controles */
+.filters-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.5rem 0;
+}
+.filters-row {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 1rem 0;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+.filters-controls-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
 .filters select {
   appearance: none;
   -webkit-appearance: none;
@@ -155,6 +170,32 @@ h1, h2 {
   box-shadow: 0 4px 16px #0002;
 }
 
+/* NUEVO: Select de juegos por página con color diferente */
+.items-per-page-select {
+  background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px #0001;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.8em center;
+  background-size: 1.2em;
+  padding-right: 2.5em;
+}
+.items-per-page-select:hover,
+.items-per-page-select:focus {
+  background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px #0002;
+}
+
 /* Botón bonito para reiniciar filtros */
 .reset-filters-btn {
   background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
@@ -178,13 +219,24 @@ h1, h2 {
   box-shadow: 0 4px 16px #0002;
 }
 
+/* NUEVO: Centrar los botones de paginación */
+.pagination-pages {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
 .pagination {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   margin: 2rem 0;
   flex-wrap: wrap;
 }
+
+/* El select de paginación (por si existe) */
 .pagination select {
   appearance: none;
   -webkit-appearance: none;

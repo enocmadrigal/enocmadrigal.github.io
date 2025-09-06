@@ -68,6 +68,11 @@ function setup() {
         const filters = new Filters(getFilterOptions(), (filters) => {
             currentFilters = filters;
             update();
+        }, (newItemsPerPage) => {
+            itemsPerPage = newItemsPerPage;
+            currentPage = 1;
+            renderGamesList();
+            renderPagination();
         });
         filtersContainer.appendChild(filters.render());
     }
