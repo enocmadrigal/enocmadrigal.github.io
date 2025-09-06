@@ -4,8 +4,8 @@ body {
   padding: 0;
   /*Instagram-like gradient background
   background: linear-gradient(135deg, #f58529 0%, #dd2a7b 40%, #8134af 70%, #515bd4 100%);*/
-  background: linear-gradient(#f1f1f4 100%);
-  color: #fff;
+  background: linear-gradient(#d3e2b8 100%);
+  color: hsl(0, 100%, 1%);
   min-height: 100vh;
 }
 
@@ -21,7 +21,7 @@ header h1 {
   font-size: 2.8rem;
   font-weight: 800;
   letter-spacing: 2px;
-  background: linear-gradient(90deg, #fdc468 0%, #fa7e1e 25%, #dd2a7b 50%, #8134af 75%, #515bd4 100%);
+  background: linear-gradient(90deg, #0e1b6f 0%, #0e1b6f 25%, #0e1b6f 50%, #0e1b6f 75%, #0e1b6f 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -56,7 +56,7 @@ h1, h2 {
 }
 
 .game-card {
-  background: linear-gradient(135deg, #fdc468 0%, #fa7e1e 100%);
+  background: linear-gradient(135deg, #f8d090 0%, #fa7e1e 100%);
   color: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 24px #0003;
@@ -154,7 +154,7 @@ h1, h2 {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: linear-gradient(90deg, #fdc468 0%, #fa7e1e 25%, #dd2a7b 50%, #8134af 75%, #515bd4 100%);
-  color: #fff;
+  color: #090000;
   border: none;
   border-radius: 8px;
   padding: 0.5rem 1.2rem;
@@ -179,8 +179,8 @@ h1, h2 {
 
 /* Select de juegos por página con otro degradado Instagram */
 .items-per-page-select {
-  background: linear-gradient(90deg, #f58529 0%, #fdc468 50%, #fa7e1e 100%);
-  color: #fff;
+  background: linear-gradient(90deg, #f4e7dd 0%, #f4e7dd 50%, #f4e7dd 100%);
+  color: #020000;
   border: none;
   border-radius: 8px;
   padding: 0.5rem 1.2rem;
