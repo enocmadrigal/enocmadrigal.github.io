@@ -84,14 +84,14 @@ h1, h2 {
 }
 
 .search-bar {
-  margin: 1rem 0;
+  margin: 2rem 0;
   position: relative;
 }
 .search-input {
   width: 100%;
   padding: 0.7rem;
   border-radius: 8px;
-  border: 1px solid #fff2;
+  border: 1px solid rgba(5, 0, 0, 0.133);
   font-size: 1rem;
   background: rgba(255,255,255,0.15);
   color: #fff;
