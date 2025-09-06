@@ -4,7 +4,7 @@ body {
   padding: 0;
   /*Instagram-like gradient background
   background: linear-gradient(135deg, #f58529 0%, #dd2a7b 40%, #8134af 70%, #515bd4 100%);*/
-  background: linear-gradient(#d3e2b8 100%);
+  background: linear-gradient(#f3f4f3 100%);
   color: hsl(0, 100%, 1%);
   min-height: 100vh;
 }
