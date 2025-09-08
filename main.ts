@@ -13,7 +13,7 @@ const AUTOCOMPLETE_RESULTS = 5;
 let currentPage = 1;
 let itemsPerPage = GAMES_PER_PAGE_DEFAULT;
 let currentFilters: Record<string, string> = {};
-let currentSort: SortOrder = "az";
+let currentSort: SortOrder = "newest";
 let filteredGames = games;
 
 function getFilterOptions(): FilterOptions {
@@ -91,13 +91,13 @@ function setup() {
   const sortContainer = document.getElementById("sort-bar");
   if (sortContainer) {
     sortContainer.innerHTML = `
-      <select id="sort-select">
-        <option value="az">A-Z</option>
-        <option value="za">Z-A</option>
-        <option value="newest">Más nuevo</option>
-        <option value="oldest">Más viejo</option>
-      </select>
-    `;
+  <select id="sort-select">
+    <option value="az">A-Z</option>
+    <option value="za">Z-A</option>
+    <option value="newest" selected>Más nuevo</option>
+    <option value="oldest">Más viejo</option>
+  </select>
+`;
     const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
     sortSelect.onchange = () => {
       currentSort = sortSelect.value as SortOrder;
