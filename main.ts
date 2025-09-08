@@ -7,12 +7,11 @@ import { filterGames } from "./utils/filter.js";
 import { sortGames, SortOrder } from "./utils/sort.js";
 import { paginateGames } from "./utils/pagination.js";
 
-// Cambia el valor por default a 12
 const GAMES_PER_PAGE_DEFAULT = 12;
 const AUTOCOMPLETE_RESULTS = 5;
 
 let currentPage = 1;
-let itemsPerPage: number | "all" = GAMES_PER_PAGE_DEFAULT; // <-- Cambiado aquí
+let itemsPerPage: number | "all" = GAMES_PER_PAGE_DEFAULT;
 let currentFilters: Record<string, string> = {};
 let currentSort: SortOrder = "newest";
 let filteredGames = games;
@@ -76,7 +75,7 @@ function setup() {
   if (pageSizeContainer) {
     pageSizeContainer.innerHTML = `
       <label for="page-size-select">Mostrar:</label>
-      <select id="page-size-select">
+      <select id="page-size-select" class="items-per-page-select">
         <option value="6">6</option>
         <option value="12" selected>12</option>
         <option value="24">24</option>
@@ -85,6 +84,9 @@ function setup() {
       </select>
     `;
     const pageSizeSelect = document.getElementById("page-size-select") as HTMLSelectElement;
+    // Set default value to 12
+    pageSizeSelect.value = "12";
+    itemsPerPage = 12;
     pageSizeSelect.onchange = () => {
       itemsPerPage = pageSizeSelect.value === "all" ? "all" : parseInt(pageSizeSelect.value, 10);
       currentPage = 1;
