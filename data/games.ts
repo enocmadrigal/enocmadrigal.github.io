@@ -616,24 +616,6 @@ export const games: Game[] = [
   {
     id: 35,
     purchaseOrder: 35,
-    name: "Canicas",
-    publisher: "Genérico",
-    categories: ["Clásico", "Habilidad"],
-    players: "2+",
-    duration: "10-30 min",
-    mode: "Competitivo",
-    description: "Juego tradicional de habilidad con canicas.",
-    rules: "Los jugadores lanzan canicas para sacar las de los demás de un círculo.",
-    videoUrl: "assets/video/canicas.mp4",
-    mainImage: "assets/img/canicas1.jpg",
-    secondaryImages: ["canicas2.jpg", "canicas3.jpg"],
-    rankValue: 73,
-    acquisitionDate: "07/09/2024",
-    aproxDate: false
-  },
-  {
-    id: 36,
-    purchaseOrder: 36,
     name: "Basta Original",
     publisher: "Genérico",
     categories: ["Party", "Palabras"],
@@ -650,8 +632,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 37,
-    purchaseOrder: 37,
+    id: 36,
+    purchaseOrder: 36,
     name: "Marvel Lucha Libre",
     publisher: "Marvel",
     categories: ["Cartas", "Familiar"],
@@ -668,8 +650,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 38,
-    purchaseOrder: 38,
+    id: 37,
+    purchaseOrder: 37,
     name: "Ni Sí Ni No",
     publisher: "Genérico",
     categories: ["Party", "Preguntas"],
@@ -686,8 +668,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 39,
-    purchaseOrder: 39,
+    id: 38,
+    purchaseOrder: 38,
     name: "A sus marcas!",
     publisher: "Devir",
     categories: ["Habilidad", "Familiar"],
@@ -704,8 +686,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 40,
-    purchaseOrder: 40,
+    id: 39,
+    purchaseOrder: 39,
     name: "Tech Deck",
     publisher: "Spin Master",
     categories: ["Habilidad", "Coleccionable"],
@@ -722,8 +704,8 @@ export const games: Game[] = [
     aproxDate: true
   },
   {
-    id: 41,
-    purchaseOrder: 41,
+    id: 40,
+    purchaseOrder: 40,
     name: "Blockbuster",
     publisher: "Big Potato Games",
     categories: ["Party", "Películas"],
@@ -740,8 +722,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 42,
-    purchaseOrder: 42,
+    id: 41,
+    purchaseOrder: 41,
     name: "Disney Mania",
     publisher: "Disney",
     categories: ["Trivia", "Familiar"],
@@ -758,8 +740,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 43,
-    purchaseOrder: 43,
+    id: 42,
+    purchaseOrder: 42,
     name: "Liar",
     publisher: "Genérico",
     categories: ["Cartas", "Bluff"],
@@ -776,8 +758,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 44,
-    purchaseOrder: 44,
+    id: 43,
+    purchaseOrder: 43,
     name: "That's Not a Hat",
     publisher: "Ravensburger",
     categories: ["Party", "Memoria"],
@@ -794,8 +776,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 45,
-    purchaseOrder: 45,
+    id: 44,
+    purchaseOrder: 44,
     name: "Among Us",
     publisher: "Aurora World",
     categories: ["Party", "Deduction"],
@@ -812,8 +794,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 46,
-    purchaseOrder: 46,
+    id: 45,
+    purchaseOrder: 45,
     name: "Al Chile",
     publisher: "N/A",
     categories: ["Party", "Preguntas"],
@@ -830,8 +812,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 47,
-    purchaseOrder: 47,
+    id: 46,
+    purchaseOrder: 46,
     name: "Domino Resina",
     publisher: "Genérico",
     categories: ["Clásico", "Familiar"],
@@ -848,8 +830,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 48,
-    purchaseOrder: 48,
+    id: 47,
+    purchaseOrder: 47,
     name: "Clue",
     publisher: "Hasbro",
     categories: ["Misterio", "Deducción"],
@@ -866,8 +848,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 49,
-    purchaseOrder: 49,
+    id: 48,
+    purchaseOrder: 48,
     name: "Candy Land",
     publisher: "Hasbro",
     categories: ["Infantil", "Clásico"],
@@ -884,8 +866,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 50,
-    purchaseOrder: 50,
+    id: 49,
+    purchaseOrder: 49,
     name: "History Channel",
     publisher: "History Channel",
     categories: ["Trivia", "Historia"],
@@ -902,8 +884,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 51,
-    purchaseOrder: 51,
+    id: 50,
+    purchaseOrder: 50,
     name: "Life Mario",
     publisher: "Hasbro",
     categories: ["Familiar", "Aventura"],
@@ -920,8 +902,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 52,
-    purchaseOrder: 52,
+    id: 51,
+    purchaseOrder: 51,
     name: "Tetris",
     publisher: "Hasbro",
     categories: ["Puzzle", "Habilidad"],
@@ -938,8 +920,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 53,
-    purchaseOrder: 53,
+    id: 52,
+    purchaseOrder: 52,
     name: "We’re Not Really Strangers",
     publisher: "WNRS",
     categories: ["Conversación", "Party"],
@@ -956,8 +938,8 @@ export const games: Game[] = [
     aproxDate: false
   },
   {
-    id: 54,
-    purchaseOrder: 54,
+    id: 53,
+    purchaseOrder: 53,
     name: "Cubo Rubik 3x3",
     publisher: "Rubik's",
     categories: ["Habilidad", "Puzzle"],
@@ -970,6 +952,24 @@ export const games: Game[] = [
     mainImage: "assets/img/cuboRubik3x3.jpg",
     secondaryImages: [],
     rankValue: 57,
+    acquisitionDate: "07/12/2024",
+    aproxDate: false
+  },
+  {
+    id: 54,
+    purchaseOrder: 54,
+    name: "Canicas",
+    publisher: "Genérico",
+    categories: ["Clásico", "Habilidad"],
+    players: "2+",
+    duration: "10-30 min",
+    mode: "Competitivo",
+    description: "Juego tradicional de habilidad con canicas.",
+    rules: "Los jugadores lanzan canicas para sacar las de los demás de un círculo.",
+    videoUrl: "assets/video/canicas.mp4",
+    mainImage: "assets/img/canicas1.jpg",
+    secondaryImages: ["canicas2.jpg", "canicas3.jpg"],
+    rankValue: 73,
     acquisitionDate: "07/12/2024",
     aproxDate: false
   },
@@ -1188,5 +1188,5 @@ export const games: Game[] = [
     rankValue: 39,
     acquisitionDate: "05/09/2025",
     aproxDate: false
-  }
-  ];
+    }
+];
