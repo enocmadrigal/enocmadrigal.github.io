@@ -7,14 +7,17 @@ import { filterGames } from "./utils/filter.js";
 import { sortGames, SortOrder } from "./utils/sort.js";
 import { paginateGames } from "./utils/pagination.js";
 
-const GAMES_PER_PAGE_DEFAULT = 12;
 const AUTOCOMPLETE_RESULTS = 5;
 
 let currentPage = 1;
-let itemsPerPage: number | "all" = GAMES_PER_PAGE_DEFAULT;
+let itemsPerPage: number | "all";
 let currentFilters: Record<string, string> = {};
 let currentSort: SortOrder = "newest";
 let filteredGames = games;
+
+function isMobile() {
+  return window.innerWidth <= 600;
+}
 
 function getFilterOptions(): FilterOptions {
   return {
@@ -73,20 +76,20 @@ function setup() {
   // Filtro de cantidad de juegos por página
   const pageSizeContainer = document.getElementById("page-size-container");
   if (pageSizeContainer) {
+    const defaultPageSize = isMobile() ? "6" : "12";
     pageSizeContainer.innerHTML = `
       <label for="page-size-select">Mostrar:</label>
       <select id="page-size-select" class="items-per-page-select">
         <option value="6">6 juegos por página</option>
-        <option value="12" selected>12 juegos por página</option>
+        <option value="12">12 juegos por página</option>
         <option value="24">24 juegos por página</option>
         <option value="48">48 juegos por página</option>
         <option value="all">Todos los juegos</option>
       </select>
     `;
     const pageSizeSelect = document.getElementById("page-size-select") as HTMLSelectElement;
-    // Set default value to 12
-    pageSizeSelect.value = "12";
-    itemsPerPage = 12;
+    pageSizeSelect.value = defaultPageSize;
+itemsPerPage = parseInt(defaultPageSize, 10);
     pageSizeSelect.onchange = () => {
       itemsPerPage = pageSizeSelect.value === "all" ? "all" : parseInt(pageSizeSelect.value, 10);
       currentPage = 1;
@@ -96,36 +99,36 @@ function setup() {
   }
 
   // Filters
-const filtersContainer = document.getElementById("filters");
-if (filtersContainer) {
-  const filters = new Filters(
-    getFilterOptions(),
-    (filters) => {
-      currentFilters = filters;
-      update();
-    }
-  );
-  filtersContainer.appendChild(filters.render());
-}
+  const filtersContainer = document.getElementById("filters");
+  if (filtersContainer) {
+    const filters = new Filters(
+      getFilterOptions(),
+      (filters) => {
+        currentFilters = filters;
+        update();
+      }
+    );
+    filtersContainer.appendChild(filters.render());
+  }
 
   // Sort
-const sortContainer = document.getElementById("sort-bar");
-if (sortContainer) {
-  sortContainer.innerHTML = `
-    <label for="sort-select">Ordenar por:</label>
-    <select id="sort-select" class="items-per-page-select">
-      <option value="newest" selected>Más nuevo</option>
-      <option value="oldest">Más viejo</option>
-      <option value="az">A-Z</option>
-      <option value="za">Z-A</option>
-    </select>
-  `;
-  const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
-  sortSelect.onchange = () => {
-    currentSort = sortSelect.value as SortOrder;
-    update();
-  };
-}
+  const sortContainer = document.getElementById("sort-bar");
+  if (sortContainer) {
+    sortContainer.innerHTML = `
+      <label for="sort-select">Ordenar por:</label>
+      <select id="sort-select" class="items-per-page-select">
+        <option value="newest" selected>Más nuevo</option>
+        <option value="oldest">Más viejo</option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      </select>
+    `;
+    const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
+    sortSelect.onchange = () => {
+      currentSort = sortSelect.value as SortOrder;
+      update();
+    };
+  }
 
   update();
 }
