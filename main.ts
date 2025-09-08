@@ -76,10 +76,10 @@ function setup() {
     pageSizeContainer.innerHTML = `
       <label for="page-size-select">Mostrar:</label>
       <select id="page-size-select" class="items-per-page-select">
-        <option value="6">6</option>
-        <option value="12" selected>12</option>
-        <option value="24">24</option>
-        <option value="48">48</option>
+        <option value="6">6 juegos por página</option>
+        <option value="12" selected>12 juegos por página</option>
+        <option value="24">24 juegos por página</option>
+        <option value="48">48 juegos por página</option>
         <option value="all">Todos los juegos</option>
       </select>
     `;
@@ -96,41 +96,36 @@ function setup() {
   }
 
   // Filters
-  const filtersContainer = document.getElementById("filters");
-  if (filtersContainer) {
-    const filters = new Filters(
-      getFilterOptions(),
-      (filters) => {
-        currentFilters = filters;
-        update();
-      },
-      (newItemsPerPage: number | "all") => {
-        itemsPerPage = newItemsPerPage;
-        currentPage = 1;
-        renderGamesList();
-        renderPagination();
-      }
-    );
-    filtersContainer.appendChild(filters.render());
-  }
+const filtersContainer = document.getElementById("filters");
+if (filtersContainer) {
+  const filters = new Filters(
+    getFilterOptions(),
+    (filters) => {
+      currentFilters = filters;
+      update();
+    }
+  );
+  filtersContainer.appendChild(filters.render());
+}
 
   // Sort
-  const sortContainer = document.getElementById("sort-bar");
-  if (sortContainer) {
-    sortContainer.innerHTML = `
-  <select id="sort-select">
-    <option value="az">A-Z</option>
-    <option value="za">Z-A</option>
-    <option value="newest" selected>Más nuevo</option>
-    <option value="oldest">Más viejo</option>
-  </select>
-`;
-    const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
-    sortSelect.onchange = () => {
-      currentSort = sortSelect.value as SortOrder;
-      update();
-    };
-  }
+const sortContainer = document.getElementById("sort-bar");
+if (sortContainer) {
+  sortContainer.innerHTML = `
+    <label for="sort-select">Ordenar por:</label>
+    <select id="sort-select" class="items-per-page-select">
+      <option value="newest" selected>Más nuevo</option>
+      <option value="oldest">Más viejo</option>
+      <option value="az">A-Z</option>
+      <option value="za">Z-A</option>
+    </select>
+  `;
+  const sortSelect = document.getElementById("sort-select") as HTMLSelectElement;
+  sortSelect.onchange = () => {
+    currentSort = sortSelect.value as SortOrder;
+    update();
+  };
+}
 
   update();
 }

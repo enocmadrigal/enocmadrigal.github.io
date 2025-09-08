@@ -1,9 +1,9 @@
 export class Filters {
-    constructor(options, onFilter, onItemsPerPageChange // Nuevo callback opcional
+    constructor(options, onFilter
+    // Eliminado el callback de itemsPerPage, ya no se usa aquí
     ) {
         this.options = options;
         this.onFilter = onFilter;
-        this.onItemsPerPageChange = onItemsPerPageChange;
     }
     render() {
         // Contenedor principal
@@ -36,7 +36,7 @@ export class Filters {
         filtersRow.appendChild(createSelect("duration", this.options.duration));
         filtersRow.appendChild(createSelect("mode", this.options.mode));
         filtersRow.appendChild(createSelect("publisher", this.options.publisher));
-        // Fila de controles (reiniciar y select de juegos por página)
+        // Fila de controles (solo botón de reinicio)
         const controlsRow = document.createElement("div");
         controlsRow.className = "filters-controls-row";
         // Botón de reinicio
@@ -48,22 +48,6 @@ export class Filters {
             selects.forEach(sel => sel.value = "");
             this.onFilter(this.getFilters(wrapper));
         };
-        // Select de juegos por página
-        const itemsPerPageSelect = document.createElement("select");
-        itemsPerPageSelect.className = "items-per-page-select";
-        [5, 10, 20, 50].forEach(num => {
-            const option = document.createElement("option");
-            option.value = num.toString();
-            option.textContent = `${num} juegos por página`;
-            itemsPerPageSelect.appendChild(option);
-        });
-        itemsPerPageSelect.onchange = () => {
-            if (this.onItemsPerPageChange) {
-                this.onItemsPerPageChange(parseInt(itemsPerPageSelect.value, 10));
-            }
-        };
-        // Orden: primero select de juegos por página, luego botón de reinicio
-        controlsRow.appendChild(itemsPerPageSelect);
         controlsRow.appendChild(resetBtn);
         // Agrega ambas filas al wrapper
         wrapper.appendChild(filtersRow);
@@ -74,7 +58,6 @@ export class Filters {
         const selects = container.querySelectorAll("select");
         const filters = {};
         selects.forEach(sel => {
-            // Evita tomar el select de juegos por página como filtro
             if (sel.name) {
                 filters[sel.name] = sel.value;
             }
