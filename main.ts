@@ -7,11 +7,12 @@ import { filterGames } from "./utils/filter.js";
 import { sortGames, SortOrder } from "./utils/sort.js";
 import { paginateGames } from "./utils/pagination.js";
 
-const GAMES_PER_PAGE_DEFAULT = 10;
+// Cambia el valor por default a 12
+const GAMES_PER_PAGE_DEFAULT = 12;
 const AUTOCOMPLETE_RESULTS = 5;
 
 let currentPage = 1;
-let itemsPerPage = GAMES_PER_PAGE_DEFAULT;
+let itemsPerPage: number | "all" = GAMES_PER_PAGE_DEFAULT; // <-- Cambiado aquí
 let currentFilters: Record<string, string> = {};
 let currentSort: SortOrder = "newest";
 let filteredGames = games;
@@ -30,7 +31,8 @@ function renderGamesList() {
   const container = document.getElementById("games-list");
   if (!container) return;
   container.innerHTML = "";
-  const paginated = paginateGames(filteredGames, currentPage, itemsPerPage);
+  const perPage = itemsPerPage === "all" ? filteredGames.length : itemsPerPage;
+  const paginated = paginateGames(filteredGames, currentPage, perPage);
   paginated.forEach(game => {
     const card = new GameCard(game).render();
     container.appendChild(card);
@@ -49,9 +51,10 @@ function renderPagination() {
   const container = document.getElementById("pagination");
   if (!container) return;
   container.innerHTML = "";
-  const pagination = new Pagination(filteredGames.length, itemsPerPage, (page, perPage) => {
+  const perPage = itemsPerPage === "all" ? filteredGames.length : itemsPerPage;
+  const pagination = new Pagination(filteredGames.length, perPage, (page, perPageValue: number | "all") => {
     currentPage = page;
-    itemsPerPage = perPage;
+    itemsPerPage = perPageValue;
     renderGamesList();
     renderPagination();
   });
@@ -68,6 +71,28 @@ function setup() {
     searchContainer.appendChild(searchBar.render());
   }
 
+  // Filtro de cantidad de juegos por página
+  const pageSizeContainer = document.getElementById("page-size-container");
+  if (pageSizeContainer) {
+    pageSizeContainer.innerHTML = `
+      <label for="page-size-select">Mostrar:</label>
+      <select id="page-size-select">
+        <option value="6">6</option>
+        <option value="12" selected>12</option>
+        <option value="24">24</option>
+        <option value="48">48</option>
+        <option value="all">Todos los juegos</option>
+      </select>
+    `;
+    const pageSizeSelect = document.getElementById("page-size-select") as HTMLSelectElement;
+    pageSizeSelect.onchange = () => {
+      itemsPerPage = pageSizeSelect.value === "all" ? "all" : parseInt(pageSizeSelect.value, 10);
+      currentPage = 1;
+      renderGamesList();
+      renderPagination();
+    };
+  }
+
   // Filters
   const filtersContainer = document.getElementById("filters");
   if (filtersContainer) {
@@ -77,7 +102,7 @@ function setup() {
         currentFilters = filters;
         update();
       },
-      (newItemsPerPage) => { // <-- callback para juegos por página
+      (newItemsPerPage: number | "all") => {
         itemsPerPage = newItemsPerPage;
         currentPage = 1;
         renderGamesList();
