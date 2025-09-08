@@ -13,4 +13,6 @@ export interface Game {
   mainImage: string;
   secondaryImages: string[];
   purchaseOrder: number; // Orden de compra, entero único consecutivo
+  acquisitionDate: string; // Fecha de adquisición, formato "dd/mm/yyyy"
+  aproxDate: boolean; // Indica si la fecha es aproximada
 }
